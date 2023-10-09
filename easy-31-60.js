@@ -225,3 +225,154 @@ console.log(cube(3)); */
   return Math.pow(num, 3);
 }
 console.log(cube(3)); */
+
+/* 41.  square
+Write a function called "square".
+Given a number, "square" should return the square of the given number.
+var output = square(5);
+console.log(output); // --> 25
+Related Topics: Variables */
+
+// 1st way
+/* function square(num) {
+  return num ** 2;
+}
+console.log(square(5)); */
+
+// 2nd way
+/* function square(num) {
+  return Math.pow(num, 2);
+}
+console.log(square(5)); */
+
+/* 42.  computeAverageLengthOfWords
+Write a function called "computeAverageLengthOfWords".
+Given two words, "computeAverageLengthOfWords" returns the average of their lengths.
+var output = computeAverageLengthOfWords('code', 'programs');
+console.log(output); // --> 6
+Related Topics: Variables */
+
+/* function computeAverageLengthOfWords(str1, str2) {
+  return (str1.length + str2.length) / 2;
+}
+console.log(computeAverageLengthOfWords("code", "programs")); */
+
+/* 43.  computeAreaOfARectangle
+Write a function called "computeAreaOfARectangle".
+Given the length and width of a rectangle, "computeAreaOfARectangle" returns its area.
+var output = computeAreaOfARectangle(4, 8);
+console.log(output); // --> 32
+Related Topics: Variables */
+
+/* function computeAreaOfARectangle(length, width) {
+  return length * width;
+}
+console.log(computeAreaOfARectangle(4, 8)); */
+
+/* 44.  computePerimeterOfARectangle
+Write a function called "computePerimeterOfARectangle".
+Given a length and a width describing a rectangle, "computePerimeterOfARectangle" returns its perimter.
+var output = computePerimeterOfARectangle(5, 2);
+console.log(output); // --> 14
+Related Topics: Variables */
+
+/* function computePerimeterOfARectangle(length, width) {
+  return 2 * (length + width);
+}
+console.log(computePerimeterOfARectangle(5, 2)); */
+
+/* 45.  computePerimeterOfATriangle
+Write a function called "computePerimeterOfATriangle".
+Given 3 sides describing a triangle, "computePerimeterOfATriangle" returns its perimter.
+var output = computePerimeterOfATriangle(6, 4, 10);
+console.log(output); // --> 20
+Related Topics: Variables */
+
+/* function computePerimeterOfATriangle(side1, side2, side3) {
+  return side1 + side2 + side3;
+}
+console.log(computePerimeterOfATriangle(6, 4, 10)); */
+
+/* 46.  computePower
+Write a function called "computePower"
+. Given a number and an exponent, "computePower" returns the given number, raised to the given exponent.
+var output = computePower(2, 3);
+console.log(output); // --> 8
+Related Topics: Variables */
+
+// 1st way
+/* function computePower(num, exponent) {
+  return num ** exponent;
+}
+console.log(computePower(2, 3)); */
+
+// 2nd way
+/* function computePower(num, exponent) {
+  return Math.pow(num, exponent);
+}
+console.log(computePower(2, 3)); */
+
+/* 47.  computeSquareRoot
+Write a function called "computeSquareRoot".
+Given a number, "computeSquareRoot" returns its square root.
+var output = computeSquareRoot(9);
+console.log(output); // --> 3
+Related Topics: Variables */
+
+/* function computeSquareRoot(num) {
+  return Math.sqrt(num);
+}
+console.log(computeSquareRoot(9)); */
+
+/* 48.  getLastElement
+Write a function called "getLastElement".
+Given an array, "getLastElement" returns the last element of the given array. Notes:* If the given array has a length of 0, it should return 'undefined'.
+var output = getLastElement([1, 2, 3, 4]);
+console.log(output); // --> 4
+Related Topics: Loop, Array */
+
+// 1st way
+/* function getLastElement(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    return arr[arr.length - 1];
+  }
+}
+console.log(getLastElement([1, 2, 3, 4])); */
+
+// 2nd way
+/* function getLastElement(arr) {
+  let num = 0;
+  while (num < arr.length) {
+    num++;
+    return arr[arr.length - 1];
+  }
+}
+console.log(getLastElement([1, 2, 3, 4])); */
+
+/* 49.  addToFront
+Write a function called "addToFront".
+Given an array and an element, "addToFront" adds the given element to the front of the given array, and returns the given array.
+Notes: * It should be the SAME array, not a new array.
+var output = addToFront([1, 2], 3);
+console.log(output); // -> [3, 1, 2]
+Related Topics: Array */
+
+/* function addToFront(arr, element) {
+  arr.unshift(element);
+  return arr;
+}
+console.log(addToFront([1, 2], 3)); */
+
+/* 50.  addToBack
+Write a function called "addToBack".
+Given an array and an element, "addToBack" returns the given array with the given element added to the end.
+Note: It should be the SAME array, not a new array.
+var output = addToBack([1, 2], 3);
+console.log(output); // -> [1, 2, 3]
+Related Topics: Array */
+
+/* function addToBack(arr, element) {
+  arr.push(element);
+  return arr;
+}
+console.log(addToBack([1, 2], 3)); */
