@@ -331,21 +331,8 @@ var output = getLastElement([1, 2, 3, 4]);
 console.log(output); // --> 4
 Related Topics: Loop, Array */
 
-// 1st way
 /* function getLastElement(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    return arr[arr.length - 1];
-  }
-}
-console.log(getLastElement([1, 2, 3, 4])); */
-
-// 2nd way
-/* function getLastElement(arr) {
-  let num = 0;
-  while (num < arr.length) {
-    num++;
-    return arr[arr.length - 1];
-  }
+  return arr[arr.length - 1];
 }
 console.log(getLastElement([1, 2, 3, 4])); */
 
@@ -376,3 +363,153 @@ Related Topics: Array */
   return arr;
 }
 console.log(addToBack([1, 2], 3)); */
+
+/* 51.  addToFrontOfNew
+Write a function called "addToFrontOfNew".
+Given an array and an element, "addToFrontOfNew" returns a new array containing all the elements of the given array, with the given element added to the front.
+Important: It should be a NEW array instance, not the original array instance.
+var input = [1, 2];
+var output = addToFrontOfNew(input, 3);
+console.log(output); // --> [3, 1, 2];
+console.log(input); --> [1, 2]
+Related Topics: Array */
+
+/* function addToFrontOfNew(arr, element) {
+  const newArr = [element, ...arr];
+  return newArr;
+}
+console.log(addToFrontOfNew([1, 2], 3)); */
+
+/* 52.  addToBackOfNew
+Write a function called "addToBackOfNew".
+Given an array and an element, "addToBackOfNew" returns a clone of the given array, with the given element added to the end.
+Important: It should be a NEW array instance, not the original array instance.
+var input = [1, 2];
+var output = addToBackOfNew(input, 3);
+console.log(input); // --> [1, 2]
+console.log(output); // --> [1, 2, 3]
+Related Topics: Array */
+
+/* function addToBackOfNew(arr, element) {
+  const newArr = [...arr, element];
+  return newArr;
+}
+console.log(addToBackOfNew([1, 2], 3)); */
+
+/* 53.  getElementsAfter
+Write a function called "getElementsAfter".
+Given an array and an index, "getElementsAfter" returns a new array with all the elements after (but not including) the given index.
+var output = getElementsAfter(['a', 'b', 'c', 'd', 'e'], 2); 
+console.log(output); // --> ['d', 'e']
+Related Topics: Array */
+
+// 1st way
+/* function getElementsAfter(arr, index) {
+  const newArr = arr.splice(index + 1, arr.length);
+  return newArr;
+}
+console.log(getElementsAfter(["a", "b", "c", "d", "e"], 2)); */
+
+// 2nd way
+/* function getElementsAfter(arr, index) {
+  const newArr = arr.slice(index + 1);
+  return [...newArr];
+}
+console.log(getElementsAfter(["a", "b", "c", "d", "e"], 2)); */
+
+/* 54.  getElementsUpTo
+Write a function called "getElementsUpTo".
+Given an array and a index, "getElementsUpTo", returns an array with all the elements up until, but not including, the element at the given index.
+Notes:* In order to do this you should be familiar with the 'splice' method.
+var output = getElementsUpTo(['a', 'b', 'c', 'd', 'e'], 3) 
+console.log(output); // --> ['a', 'b', 'c']
+Related Topics: Array */
+
+/* function getElementsUpTo(arr, index) {
+  const array = arr.splice(0, index);
+  return array;
+}
+console.log(getElementsUpTo(["a", "b", "c", "d", "e"], 3)); */
+
+/* 55.  getAllElementsButFirst
+Write a function called "getAllElementsButFirst".
+Given an array, "getAllElementsButFirst" returns an array with all the elements but the first.
+var input = [1, 2, 3, 4];
+var output = getAllElementsButFirst(input);
+console.log(output); // --> [2, 3, 4]
+Related Topics: Array */
+
+/* function getAllElementsButFirst(arr) {
+  const array = arr.splice(1);
+  return array;
+}
+console.log(getAllElementsButFirst([1, 2, 3, 4])); */
+
+/* 56.  getAllElementsButLast
+Write a function called "getAllElementsButLast".
+Given an array, "getAllElementsButLast" returns an array with all the elements but the last.
+var input = [1, 2, 3, 4];
+var output = getAllElementsButLast(input);
+console.log(output); // --> [1, 2 , 3]
+Related Topics: Array */
+
+/* function getAllElementsButLast(arr) {
+  const array = arr.slice(0, arr.length - 1);
+  return array;
+}
+console.log(getAllElementsButLast([1, 2, 3, 4])); */
+
+/* 57.  joinArrays
+Write a function called "joinArrays".
+Given two arrays, "joinArrays" returns an array with the elements of "arr1" in order, followed by the elements in "arr2".
+var output = joinArrays([1, 2], [3, 4]);
+console.log(output); // --> [1, 2, 3, 4]
+You should be familiar with the "concat" method for this problem.
+Related Topics: Array */
+
+/* function joinArrays(arr1, arr2) {
+  return arr1.concat(arr2);
+}
+console.log(joinArrays([1, 2], [3, 4])); */
+
+/* 58.  joinThreeArrays
+Write a function called "joinThreeArrays".
+Given three arrays, "joinThreeArrays" returns an array with the elements of "arr1" in order followed by the elements in "arr2" in order followed by the elements of "arr3" in order.
+var output = joinThreeArrays([1, 2], [3, 4], [5, 6]);
+console.log(output); // --> [1, 2, 3, 4, 5, 6]
+You should be familiar with the "concat" method for this problem.
+Related Topics: Array */
+
+/* function joinThreeArrays(arr1, arr2, arr3) {
+  return arr1.concat(arr2, arr3);
+}
+console.log(joinThreeArrays([1, 2], [3, 4], [5, 6])); */
+
+/* 59.  removeFromFront
+Write a function called "removeFromFront".
+Given an array, "removeFromFront" returns the given array with its first element removed. Notes:* You should be familiar with the method 'shift'.
+var output = removeFromFront([1, 2, 3]);
+console.log(output); // --> [2, 3]
+Related Topics: Array */
+
+/* function removeFromFront(arr) {
+  arr.shift();
+  return arr;
+}
+console.log(removeFromFront([1, 2, 3])); */
+
+/* 60.  removeFromBackOfNew
+Write a function called "removeFromBackOfNew".
+Given an array, "removeFromBackOfNew" returns a new array containing all but the last element of the given array.
+Notes:* You should be familiar with the 'slice' method.
+var arr = [1, 2, 3];
+var output = removeFromBackOfNew(arr);
+console.log(output); // --> [1, 2]
+console.log(arr); // --> [1, 2, 3]
+Related Topics: Array */
+
+/* function removeFromBackOfNew(arr) {
+  const array = arr.slice(0, arr.length - 1);
+  return array;
+}
+console.log(removeFromBackOfNew([1, 2, 3])); */
