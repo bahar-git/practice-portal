@@ -115,7 +115,7 @@ console.log(addPostfix(["Apple", "Orange", "Apple", "Mango"], "+")); */
 
 // 2nd way - same array
 /* const addPostfix = (arr, postfix) => {
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = arr.length - 1; i >= 0; i--) {
     arr.splice(i, 1, arr[i].concat(postfix));
   }
   return arr;
@@ -211,40 +211,60 @@ Related Topics: Function, Loop, Array */
 
 // 1st way
 /* const filterChar = (arr, char) => {
-  return arr.filter((el) => el.toLowerCase() !== char.toLowerCase());
+  return arr.filter((el) => {
+    if (typeof el === "string" && typeof char === "string") {
+      return el.toLowerCase() !== char.toLowerCase();
+    } else {
+      return el !== char;
+    }
+  });
 };
-console.log(filterChar(["a", "b", "A", "c"], "a")); */
+console.log(filterChar(["a", "b", "A", "c"], "a"));
+console.log(filterChar([1, "1", "c"], 1)); */
 
 // 2nd way
 /* const filterChar = (arr, char) => {
   return arr.reduce((acc, currVal) => {
-    if (currVal.toLowerCase() !== char.toLowerCase()) {
+    if (typeof currVal === "string" && typeof char === "string") {
+      if (currVal.toLowerCase() !== char.toLowerCase()) {
+        acc.push(currVal);
+      }
+    } else if (currVal !== char) {
       acc.push(currVal);
     }
     return acc;
   }, []);
 };
-console.log(filterChar(["a", "b", "A", "c"], "a")); */
+console.log(filterChar(["a", "b", "A", "c"], "a"));
+console.log(filterChar([1, "1", "c"], 1)); */
 
 // 3rd way - same array
 /* const filterChar = (arr, char) => {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].toLowerCase() === char.toLowerCase()) {
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (
+      typeof arr[i] === "string" &&
+      typeof char === "string" &&
+      arr[i].toLowerCase() === char.toLowerCase()
+    ) {
+      arr.splice(i, 1);
+    } else if (arr[i] === char) {
       arr.splice(i, 1);
     }
   }
   return arr;
 };
-console.log(filterChar(["a", "b", "A", "c"], "a")); */
+console.log(filterChar(["a", "b", "A", "c"], "a"));
+console.log(filterChar([1, "1", "c"], 1)); */
 
 // 4th way - new array
 /* const filterChar = (arr, char) => {
   let result = [];
   for (let el of arr) {
-    if (el.toLowerCase() !== char.toLowerCase()) {
-      result.push(el);
-    }
+    if (typeof el === "string" && typeof char === "string") {
+      if (el.toLowerCase() !== char.toLowerCase()) result.push(el);
+    } else if (el !== char) result.push(el);
   }
   return result;
 };
-console.log(filterChar(["a", "b", "A", "c"], "a")); */
+console.log(filterChar(["a", "b", "A", "c"], "a"));
+console.log(filterChar([1, "1", "c"], 1)); */
