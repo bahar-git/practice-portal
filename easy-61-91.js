@@ -11,6 +11,8 @@ Related Topics: Array */
 }
 console.log(getAllElementsButNth(["a", "b", "c"], 1)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 62.  removeElement
 Write a function called "removeElement".
 Given an array of elements, and a "discarder" parameter, "removeElement" returns an array containing the items in the given array that do not match the "discarder" parameter.
@@ -77,6 +79,8 @@ console.log(removeElement([2, 2, 2, 2, 2], 2)); */
 console.log(removeElement([1, 2, 3, 2, 1], 2));
 console.log(removeElement([2, 2, 2, 2, 2], 2)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 63.  getIndexOf
 Write a function called "getIndexOf".
 Given a character and a string, "getIndexOf" returns the first position of the given character in the given string.
@@ -95,6 +99,8 @@ Related Topics: Array, Loop */
   return -1;
 }
 console.log(getIndexOf("a", "I am a hacker")); */
+
+////////////////////////////////////////////////////////////////
 
 /* 64.  findMinLengthOfThreeWords
 Write a function called "findMinLengthOfThreeWords".
@@ -126,6 +132,8 @@ console.log(findMinLengthOfThreeWords("a", "be", "see")); */
 }
 console.log(findMinLengthOfThreeWords("a", "be", "see")); */
 
+////////////////////////////////////////////////////////////////
+
 /* 65.  findMaxLengthOfThreeWords
 Write a function called "findMaxLengthOfThreeWords".
 Given 3 words, "findMaxLengthOfThreeWords" returns the length of the longest word.
@@ -137,6 +145,8 @@ Related Topics: Variables */
   return Math.max(str1.length, str2.length, str3.length);
 }
 console.log(findMinLengthOfThreeWords("a", "be", "see")); */
+
+////////////////////////////////////////////////////////////////
 
 /* 66.  filterOddLengthWords
 Write a function called "filterOddLengthWords".
@@ -172,6 +182,8 @@ console.log(filterOddLengthWords(["there", "it", "is", "now"])); */
   return output;
 }
 console.log(filterOddLengthWords(["there", "it", "is", "now"])); */
+
+////////////////////////////////////////////////////////////////
 
 /* 67.  filterEvenLengthWords
 Write a function called "filterEvenLengthWords".
@@ -218,6 +230,8 @@ console.log(filterEvenLengthWords(["word", "words", "word", "words"])); */
 }
 console.log(filterEvenLengthWords(["word", "words", "word", "words"])); */
 
+////////////////////////////////////////////////////////////////
+
 /* 68.  getLengthOfLongestElement
 Write a function called "getLengthOfLongestElement".
 Given an array, "getLengthOfLongestElement" returns the length of the longest string in the given array.
@@ -256,6 +270,8 @@ console.log(getLengthOfLongestElement(["one", "two", "three"])); */
 }
 console.log(getLengthOfLongestElement(["one", "two", "three"])); */
 
+////////////////////////////////////////////////////////////////
+
 /* 69.  countCharacter
 Write a function called "countCharacter".
 Given a string input and a character, "countCharacter" returns the number of occurrences of a given character in the given string.
@@ -273,6 +289,8 @@ Related Topics: Loop */
   return counter;
 }
 console.log(countCharacter("I am a hacker", "a")); */
+
+////////////////////////////////////////////////////////////////
 
 /* 70.  getAllLetters
 Write a function called "getAllLetters".
@@ -297,6 +315,8 @@ console.log(getAllLetters("Radagast")); */
 }
 console.log(getAllLetters("Radagast")); */
 
+////////////////////////////////////////////////////////////////
+
 /* 71.  getAllWords
 Write a function called "getAllWords".
 Given a sentence, "getAllWords" returns an array containing every word in the sentence. Notes:* If given an empty string, it should return an empty array.
@@ -309,6 +329,8 @@ Related Topics: Variables */
   return str.split(" ");
 }
 console.log(getAllWords("Radagast the Brown")); */
+
+////////////////////////////////////////////////////////////////
 
 /* 72.  countdown
 Create a function that accepts a number as an input. Return a new array that counts down by one, from the number (as array's 'zeroth' element) down to 0 (as the last element). How long is this array?
@@ -324,6 +346,8 @@ Related Topics: Loop */
 }
 console.log(countdown(5)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 73.  print
 Your function will receive an array with two numbers. Print the first value,and return the second.
 `print([3,5]) // print 3 and return 5`
@@ -334,6 +358,8 @@ Related Topics: Variables */
   return arr[1];
 }
 console.log(print([3, 5])); */
+
+////////////////////////////////////////////////////////////////
 
 /* 74.  isEitherEvenOrAreBoth7
 Write a function called "isEitherEvenOrAreBoth7".
@@ -371,6 +397,8 @@ console.log(isEitherEvenOrAreBoth7(3, 7));
 console.log(isEitherEvenOrAreBoth7(2, 3));
 console.log(isEitherEvenOrAreBoth7(7, 7)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 75.  isEitherEvenAndLessThan9
 Write a function called "isEitherEvenAndLessThan9".
 Given two numbers, 'isEitherEvenAndLessThan9' returns true if at least one of them is even, and, both of them are less than 9.
@@ -405,6 +433,8 @@ console.log(isEitherEvenAndLessThan9(2, 4));
 console.log(isEitherEvenAndLessThan9(72, 2));
 console.log(isEitherEvenAndLessThan9(7, 1)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 76.  fahrenheitToCelsius
 Kelvin wants to convert between temperature scales.
 Create fahrenheitToCelsius(fDegrees) that accepts a number of degrees in Fahrenheit, and returns the equivalent temperature as expressed in Celsius degrees.
@@ -417,6 +447,8 @@ Related Topics: Variables */
 }
 console.log(fahrenheitToCelsius(90)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 77.  celsiusToFahrenheit
 Create celsiusToFahrenheit(cDegrees) that accepts number of degrees Celsius, and returns the equivalent temperature expressed in Fahrenheit degrees.
 `celsiusToFahrenheit(27) // 80`
@@ -426,6 +458,8 @@ Related Topics: Variables */
   return Math.floor((9 / 5) * cDegrees + 32);
 }
 console.log(celsiusToFahrenheit(27)); */
+
+////////////////////////////////////////////////////////////////
 
 /* 78.  makeitBig
 Write a function called "makeitBig".
@@ -465,6 +499,8 @@ console.log(makeitBig([-1, 3, 5, -5])); */
 }
 console.log(makeitBig([-1, 3, 5, -5])); */
 
+////////////////////////////////////////////////////////////////
+
 /* 79.  double
 Write a function called "double".
 Given array, create a function to return a new array where each value in the original has been doubled. Calling double([1,2,3]) should return [2, 4, 6] without changing original.
@@ -479,6 +515,8 @@ Related Topics: Array, Loop */
   return result;
 }
 console.log(double([1, 2, 3])); */
+
+////////////////////////////////////////////////////////////////
 
 /* 80.  prevLen
 You are passed an array containing string, Working within that same array, replace each string with a number - the length of the string previous array index - and return the array 'k
@@ -508,6 +546,8 @@ console.log(prevLen(["av", "s", "asdb", "adfgb"])); */
 }
 console.log(prevLen(["av", "s", "asdb", "adfgb"])); */
 
+////////////////////////////////////////////////////////////////
+
 /* 81.  addSeven
 Build function that accepts array. Return an array with all values except first, adding 7 to each. Do not alter the original array.
 `addSeven([1,2,5,10]) // [9,12,17]`
@@ -536,6 +576,8 @@ console.log(addSeven([1, 2, 5, 10])); */
 }
 console.log(addSeven([1, 2, 5, 10])); */
 
+////////////////////////////////////////////////////////////////
+
 /* 82.  isPersonOldEnoughToDrinkAndDrive
 Write a function called "isPersonOldEnoughToDrinkAndDrive".
 Given a "person" object, that contains an "age" property, "isPersonOldEnoughToDrinkAndDrive" returns whether the given person is old enough to legally drink and drive in the United States.
@@ -555,6 +597,8 @@ function isPersonOldEnoughToDrinkAndDrive(person) {
   return person.age >= 16 ? false : false;
 }
 console.log(isPersonOldEnoughToDrinkAndDrive(obj)); */
+
+////////////////////////////////////////////////////////////////
 
 /* 83.  isPersonOldEnoughToDrive
 Write a function called "isPersonOldEnoughToDrive".
@@ -576,6 +620,8 @@ function isPersonOldEnoughToDrive(person) {
 }
 console.log(isPersonOldEnoughToDrive(obj)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 84.  isPersonOldEnoughToVote
 Write a function called "isPersonOldEnoughToVote".
 Given a "person" object, that contains an "age" property, "isPersonOldEnoughToVote" returns whether the given person is old enough to vote.
@@ -596,6 +642,8 @@ function isPersonOldEnoughToVote(person) {
 }
 console.log(isPersonOldEnoughToVote(obj)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 85.  isPersonOldEnoughToDrink
 Write a function called "isPersonOldEnoughToDrink".
 Given a "person" object, that contains an "age" property, "isPersonOldEnoughToDrink" returns whether the given person is old enough to drink.
@@ -615,6 +663,8 @@ function isPersonOldEnoughToDrink(person) {
   return person.age >= 21 ? true : false;
 }
 console.log(isPersonOldEnoughToDrink(obj)); */
+
+////////////////////////////////////////////////////////////////
 
 /* 86.  getProperty
 Write a function called "getProperty".
@@ -642,6 +692,8 @@ console.log(getProperty(obj, "key")); */
 }
 console.log(getProperty(obj, "key")); */
 
+////////////////////////////////////////////////////////////////
+
 /* 87.  addProperty
 Write a function called "addProperty".
 Given an object, and a key, "addProperty" sets a new property on the given object with a value of true.
@@ -656,6 +708,8 @@ function addProperty(obj, key) {
   return obj;
 }
 console.log(addProperty(myObj, "myProperty")); */
+
+////////////////////////////////////////////////////////////////
 
 /* 88.  removeProperty
 Write a function called "removeProperty".
@@ -679,6 +733,8 @@ function removeProperty(obj, key) {
 }
 console.log(removeProperty(obj, "name")); */
 
+////////////////////////////////////////////////////////////////
+
 /* 89.  getLengthOfThreeWords
 Write a function called "getLengthOfThreeWords".
 Given 3 words, "getLengthOfThreeWords" returns the sum of their lengths.
@@ -690,6 +746,8 @@ Related Topics: Variables */
   return str1.length + str2.length + str3.length;
 }
 console.log(getLengthOfThreeWords("some", "other", "words")); */
+
+////////////////////////////////////////////////////////////////
 
 /* 90.  addFullNameProperty
 Write a function called "addFullNameProperty".
@@ -712,6 +770,8 @@ function addFullNameProperty(obj) {
   return obj;
 }
 console.log(addFullNameProperty(person)); */
+
+////////////////////////////////////////////////////////////////
 
 /* 91.  addArrayProperty
 Write a function called "addArrayProperty".

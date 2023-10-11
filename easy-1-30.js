@@ -7,6 +7,8 @@ Related Topics: Function */
 }
 print("test"); */
 
+////////////////////////////////////////////////////////////////
+
 /* 2.  sayHello
 Create a function sayHello(). Within it, console.log string "Hello world!"
 Related Topics: Function */
@@ -15,6 +17,8 @@ Related Topics: Function */
   console.log("Hello world!");
 }
 sayHello(); */
+
+////////////////////////////////////////////////////////////////
 
 /* 3.  getFullName
 Write a function called "getFullName".
@@ -28,6 +32,8 @@ Related Topics: Function */
 }
 console.log(getFullName("Joe", "Smith")); */
 
+////////////////////////////////////////////////////////////////
+
 /* 4.  getLengthOfWord
 Write a function called "getLengthOfWord".
 Given a word, "getLengthOfWord" returns the length of the given word.
@@ -39,6 +45,8 @@ Related Topics: Variables */
   return str.length;
 }
 console.log(getLengthOfWord("some")); */
+
+////////////////////////////////////////////////////////////////
 
 /* 5.  isGreaterThanTen
 Write a function called "isGreaterThanTen".
@@ -63,6 +71,8 @@ console.log(isGreaterThanTen(11)); */
 }
 console.log(isGreaterThanTen(11)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 6.  getLengthOfTwoWords
 Write a function called "getLengthOfTwoWords".
 Given 2 words, "getLengthOfTwoWords" returns the sum of their lengths.
@@ -82,6 +92,8 @@ console.log(getLengthOfTwoWords("some", "words")); */
   return (str1 + str2).length;
 }
 console.log(getLengthOfTwoWords("some", "words")); */
+
+////////////////////////////////////////////////////////////////
 
 /* 7.  isLessThan30
 Write a function called "isLessThan30".
@@ -106,6 +118,8 @@ console.log(isLessThan30(9)); */
 }
 console.log(isLessThan30(9)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 8.  equalsTen
 Write a function called "equalsTen".
 Given a number, "equalsTen" returns whether or not the given number is 10.
@@ -128,6 +142,8 @@ console.log(equalsTen(9)); */
   return number === 10 ? true : false;
 }
 console.log(equalsTen(9)); */
+
+////////////////////////////////////////////////////////////////
 
 /* 9.  isLessThan
 Write a function called "isLessThan".
@@ -152,6 +168,8 @@ console.log(isLessThan(9, 4)); */
 }
 console.log(isLessThan(9, 4)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 10.  isGreaterThan
 Write a function called "isGreaterThan".
 Given 2 numbers, "isGreaterThan" returns whether num2 is greater than num1.
@@ -174,6 +192,8 @@ console.log(isGreaterThan(11, 10)); */
   return num2 > num1 ? true : false;
 }
 console.log(isGreaterThan(11, 10)); */
+
+////////////////////////////////////////////////////////////////
 
 /* 11.  isEqualTo
 Write a function called "isEqualTo".
@@ -198,6 +218,8 @@ console.log(isEqualTo(11, 10)); */
 }
 console.log(isEqualTo(11, 10)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 12.  setting-and-swapping
 Create two variables: num and name1. Set num's value to 50. Set name1's value to 'Sam'. Now swap values: set num to 'Sam' and name1 to 50.
 Related Topics: Variables */
@@ -208,6 +230,8 @@ let temp = num;
 num = name1;
 name1 = temp;
 console.log(num + " " + name1); */
+
+////////////////////////////////////////////////////////////////
 
 /* 13.  isOldEnoughToDrink
 Write a function called "isOldEnoughToDrink".
@@ -242,6 +266,8 @@ console.log(isOldEnoughToDrink(22)); */
   return false;
 }
 console.log(isOldEnoughToDrink(22)); */
+
+////////////////////////////////////////////////////////////////
 
 /* 14.  isOldEnoughToDrive
 Write a function called "isOldEnoughToDrive".
@@ -282,6 +308,8 @@ console.log(isOldEnoughToDrive(22)); */
 }
 console.log(isOldEnoughToDrive(22)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 15.  isOldEnoughToVote
 Write a function called "isOldEnoughToVote".
 Given a number, in this case an age, 'isOldEnoughToVote' returns whether a person of this given age is old enough to legally vote in the United States.
@@ -317,6 +345,8 @@ console.log(isOldEnoughToVote(22)); */
   }
 }
 console.log(isOldEnoughToVote(22)); */
+
+////////////////////////////////////////////////////////////////
 
 /* 16.  isOldEnoughToDrinkAndDrive
 Write a function called "isOldEnoughToDrinkAndDrive".
@@ -354,6 +384,8 @@ console.log(isOldEnoughToDrinkAndDrive(22)); */
 }
 console.log(isOldEnoughToDrinkAndDrive(22)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 17.  Printing-Integers-While-notest
 Printing Integers with for loop.
 Print integers from 1000 to 3450.
@@ -371,6 +403,8 @@ while (num <= 3450) {
   num++;
 } */
 
+////////////////////////////////////////////////////////////////
+
 /* 18.  print-30-to-750-notest
 Print numbers from -50 to 350.
 Hint:* You can use for or while loop.
@@ -387,6 +421,8 @@ while (num <= 350) {
   console.log(num);
   num++;
 } */
+
+////////////////////////////////////////////////////////////////
 
 /* 19.  Multiples-of-Three-notest
 Using FOR loop, print multiples of 3 starting from -400 to 0. Skip numbers -3 and -6.
@@ -421,6 +457,8 @@ while (num <= 0) {
   }
   num++;
 } */
+
+////////////////////////////////////////////////////////////////
 
 /* 20.  Print-and-Count-notest
 Print and Count
@@ -457,6 +495,8 @@ printCount(); */
   console.log(counter);
 }
 printCount(); */
+
+////////////////////////////////////////////////////////////////
 
 /* 21.  checkAge
 Write a function called "checkAge".
@@ -495,6 +535,8 @@ console.log(checkAge("Adrian", 22)); */
 }
 console.log(checkAge("Adrian", 22)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 22.  Multiples-of-Six
 Write a function called "multiplesOfSix".
 Using WHILE loop, print multiples of 6 starting from 0 up to 60,000
@@ -527,6 +569,8 @@ multiplesOfSix(); */
 }
 multiplesOfSix(); */
 
+////////////////////////////////////////////////////////////////
+
 /* 23.  add-odd-integers-notest
 Using FOR loop, Add odd integers from -300,000 to 300,000 and console.log the final sum.
 var output = addOddIntegers();
@@ -556,6 +600,8 @@ while (num <= 300000) {
 }
 console.log(counter); */
 
+////////////////////////////////////////////////////////////////
+
 /* 24.  Countdown-by-Fours-notest
 Using WHILE loop, log multiples of 4 starting from 2016 to 0.
 Related Topics: Loop */
@@ -576,6 +622,8 @@ while (num >= 0) {
 /* for (let i = 2016; i >= 0; i--) {
   if (i % 4 === 0) console.log(i);
 } */
+
+////////////////////////////////////////////////////////////////
 
 /* 25.  printIntaAndSum0To255
 Using FOR loop, get a sum of all numbers from 0 to 255 (255 included). Return the sum. Inside the loop, also console.log the value of sum and see how the value is changing on every iteration.
@@ -605,6 +653,8 @@ console.log(printIntaAndSum0To255()); */
 }
 console.log(printIntaAndSum0To255()); */
 
+////////////////////////////////////////////////////////////////
+
 /* 26.  Print-Odds-1-255-notest
 Using FOR loop and modulus operator, print all odd integers from 1 to 255.
 output -> 1, 3, 5...
@@ -632,6 +682,8 @@ printOdds1To255(); */
   }
 }
 printOdds1To255(); */
+
+////////////////////////////////////////////////////////////////
 
 /* 27.  Threes-and-Fives
 Create threesFives() that finds values from 100 and 400 (including 400) that are divisible by either 3 or 5, but not both 3 and 5. Get the sum of those values. Display the final sum in the console.
@@ -682,6 +734,8 @@ threesFives(); */
 }
 threesFives(); */
 
+////////////////////////////////////////////////////////////////
+
 /* 28.  modulo
 Write a function called "modulo".
 Given 2 numbers, "modulo" returns the remainder after dividing num1 by num2.
@@ -716,6 +770,8 @@ console.log(modulo(25, 4)); */
 }
 console.log(modulo(25, 4)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 29.  multiply
 Write a function called "multiply".
 Given 2 numbers, "multiply" returns their product.
@@ -745,6 +801,8 @@ console.log(multiply(4, 7)); */
   return output;
 }
 console.log(multiply(4, 7)); */
+
+////////////////////////////////////////////////////////////////
 
 /* 30.  isEven
 Write a function called "isEven".

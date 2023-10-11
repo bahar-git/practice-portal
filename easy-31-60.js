@@ -33,6 +33,8 @@ console.log(isOdd(9)); */
 }
 console.log(isOdd(9)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 32.  isSameLength
 Write a function called "isSameLength".
 Given two words, "isSameLength" returns whether the given words have the same length.
@@ -57,6 +59,8 @@ console.log(isSameLength("words", "super")); */
   }
 }
 console.log(isSameLength("words", "super")); */
+
+////////////////////////////////////////////////////////////////
 
 /* 33.  areBothOdd
 Write a function called "areBothOdd".
@@ -83,6 +87,8 @@ console.log(areBothOdd(1, 3)); */
 }
 console.log(areBothOdd(1, 3)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 34.  isEitherEven
 Write a function called "isEitherEven".
 Given two numbers, "isEitherEven" returns whether or not either one of the given numbers is even.
@@ -107,6 +113,8 @@ console.log(isEitherEven(1, 4)); */
   }
 }
 console.log(isEitherEven(1, 4)); */
+
+////////////////////////////////////////////////////////////////
 
 /* 35.  isOddLength
 Write a function called "isOddLength".
@@ -133,6 +141,8 @@ console.log(isOddLength("special")); */
 }
 console.log(isOddLength("special")); */
 
+////////////////////////////////////////////////////////////////
+
 /* 36.  isEvenLength
 Write a function called "isEvenLength".
 Given a word, "isEvenLength" returns whether the length of the word is even.
@@ -157,6 +167,8 @@ console.log(isEvenLength("wow")); */
   }
 }
 console.log(isEvenLength("wow")); */
+
+////////////////////////////////////////////////////////////////
 
 /* 37.  isEvenAndGreaterThanTen
 Write a function called "isEvenAndGreaterThanTen".
@@ -183,6 +195,8 @@ console.log(isEvenAndGreaterThanTen(13)); */
 }
 console.log(isEvenAndGreaterThanTen(13)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 38.  average
 Write a function called "average".
 Given two numbers, "average" returns their average.
@@ -195,6 +209,8 @@ Related Topics: Variables */
 }
 console.log(average(4, 6)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 39.  computeAreaOfATriangle
 Write a function called "computeAreaOfATriangle".
 Given the base and height of a triangle, "computeAreaOfATriangle" returns its area.
@@ -206,6 +222,8 @@ Related Topics: Variables */
   return (height * base) / 2;
 }
 console.log(computeAreaOfATriangle(4, 6)); */
+
+////////////////////////////////////////////////////////////////
 
 /* 40.  cube
 Write a function called "cube".
@@ -226,6 +244,8 @@ console.log(cube(3)); */
 }
 console.log(cube(3)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 41.  square
 Write a function called "square".
 Given a number, "square" should return the square of the given number.
@@ -245,6 +265,8 @@ console.log(square(5)); */
 }
 console.log(square(5)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 42.  computeAverageLengthOfWords
 Write a function called "computeAverageLengthOfWords".
 Given two words, "computeAverageLengthOfWords" returns the average of their lengths.
@@ -256,6 +278,8 @@ Related Topics: Variables */
   return (str1.length + str2.length) / 2;
 }
 console.log(computeAverageLengthOfWords("code", "programs")); */
+
+////////////////////////////////////////////////////////////////
 
 /* 43.  computeAreaOfARectangle
 Write a function called "computeAreaOfARectangle".
@@ -269,6 +293,8 @@ Related Topics: Variables */
 }
 console.log(computeAreaOfARectangle(4, 8)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 44.  computePerimeterOfARectangle
 Write a function called "computePerimeterOfARectangle".
 Given a length and a width describing a rectangle, "computePerimeterOfARectangle" returns its perimter.
@@ -281,6 +307,8 @@ Related Topics: Variables */
 }
 console.log(computePerimeterOfARectangle(5, 2)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 45.  computePerimeterOfATriangle
 Write a function called "computePerimeterOfATriangle".
 Given 3 sides describing a triangle, "computePerimeterOfATriangle" returns its perimter.
@@ -292,6 +320,8 @@ Related Topics: Variables */
   return side1 + side2 + side3;
 }
 console.log(computePerimeterOfATriangle(6, 4, 10)); */
+
+////////////////////////////////////////////////////////////////
 
 /* 46.  computePower
 Write a function called "computePower"
@@ -312,6 +342,8 @@ console.log(computePower(2, 3)); */
 }
 console.log(computePower(2, 3)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 47.  computeSquareRoot
 Write a function called "computeSquareRoot".
 Given a number, "computeSquareRoot" returns its square root.
@@ -324,6 +356,8 @@ Related Topics: Variables */
 }
 console.log(computeSquareRoot(9)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 48.  getLastElement
 Write a function called "getLastElement".
 Given an array, "getLastElement" returns the last element of the given array. Notes:* If the given array has a length of 0, it should return 'undefined'.
@@ -335,6 +369,8 @@ Related Topics: Loop, Array */
   return arr[arr.length - 1];
 }
 console.log(getLastElement([1, 2, 3, 4])); */
+
+////////////////////////////////////////////////////////////////
 
 /* 49.  addToFront
 Write a function called "addToFront".
@@ -350,6 +386,8 @@ Related Topics: Array */
 }
 console.log(addToFront([1, 2], 3)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 50.  addToBack
 Write a function called "addToBack".
 Given an array and an element, "addToBack" returns the given array with the given element added to the end.
@@ -363,6 +401,8 @@ Related Topics: Array */
   return arr;
 }
 console.log(addToBack([1, 2], 3)); */
+
+////////////////////////////////////////////////////////////////
 
 /* 51.  addToFrontOfNew
 Write a function called "addToFrontOfNew".
@@ -380,6 +420,8 @@ Related Topics: Array */
 }
 console.log(addToFrontOfNew([1, 2], 3)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 52.  addToBackOfNew
 Write a function called "addToBackOfNew".
 Given an array and an element, "addToBackOfNew" returns a clone of the given array, with the given element added to the end.
@@ -395,6 +437,8 @@ Related Topics: Array */
   return newArr;
 }
 console.log(addToBackOfNew([1, 2], 3)); */
+
+////////////////////////////////////////////////////////////////
 
 /* 53.  getElementsAfter
 Write a function called "getElementsAfter".
@@ -417,6 +461,8 @@ console.log(getElementsAfter(["a", "b", "c", "d", "e"], 2)); */
 }
 console.log(getElementsAfter(["a", "b", "c", "d", "e"], 2)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 54.  getElementsUpTo
 Write a function called "getElementsUpTo".
 Given an array and a index, "getElementsUpTo", returns an array with all the elements up until, but not including, the element at the given index.
@@ -430,6 +476,8 @@ Related Topics: Array */
   return array;
 }
 console.log(getElementsUpTo(["a", "b", "c", "d", "e"], 3)); */
+
+////////////////////////////////////////////////////////////////
 
 /* 55.  getAllElementsButFirst
 Write a function called "getAllElementsButFirst".
@@ -445,6 +493,8 @@ Related Topics: Array */
 }
 console.log(getAllElementsButFirst([1, 2, 3, 4])); */
 
+////////////////////////////////////////////////////////////////
+
 /* 56.  getAllElementsButLast
 Write a function called "getAllElementsButLast".
 Given an array, "getAllElementsButLast" returns an array with all the elements but the last.
@@ -459,6 +509,8 @@ Related Topics: Array */
 }
 console.log(getAllElementsButLast([1, 2, 3, 4])); */
 
+////////////////////////////////////////////////////////////////
+
 /* 57.  joinArrays
 Write a function called "joinArrays".
 Given two arrays, "joinArrays" returns an array with the elements of "arr1" in order, followed by the elements in "arr2".
@@ -471,6 +523,8 @@ Related Topics: Array */
   return arr1.concat(arr2);
 }
 console.log(joinArrays([1, 2], [3, 4])); */
+
+////////////////////////////////////////////////////////////////
 
 /* 58.  joinThreeArrays
 Write a function called "joinThreeArrays".
@@ -485,6 +539,8 @@ Related Topics: Array */
 }
 console.log(joinThreeArrays([1, 2], [3, 4], [5, 6])); */
 
+////////////////////////////////////////////////////////////////
+
 /* 59.  removeFromFront
 Write a function called "removeFromFront".
 Given an array, "removeFromFront" returns the given array with its first element removed. Notes:* You should be familiar with the method 'shift'.
@@ -497,6 +553,8 @@ Related Topics: Array */
   return arr;
 }
 console.log(removeFromFront([1, 2, 3])); */
+
+////////////////////////////////////////////////////////////////
 
 /* 60.  removeFromBackOfNew
 Write a function called "removeFromBackOfNew".
