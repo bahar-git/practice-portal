@@ -23,6 +23,8 @@ console.log(isBiggerThan5([25, 15, 12, 14])); */
 console.log(isBiggerThan5([1, 2, 3, 4]));
 console.log(isBiggerThan5([25, 15, 12, 14])); */
 
+////////////////////////////////////////////////////////////////
+
 /* 2.  isLessThan
 Create a function which returns true if any element of a given array is less then a given number
 `isLessThan([1,2,3,4],2) // true
@@ -46,6 +48,8 @@ console.log(isLessThan([10, 20, 60], 10)); */
 };
 console.log(isLessThan([1, 2, 3, 4], 2));
 console.log(isLessThan([10, 20, 60], 10)); */
+
+////////////////////////////////////////////////////////////////
 
 /* 3.  lastIndexOf
 Create a function which returns last index of an item from a given array.
@@ -83,6 +87,8 @@ console.log(lastIndexOf([1, 1, 2, 3, 1, 3], 1)); */
 console.log(lastIndexOf(["Apple", "Orange", "Apple", "Mango"], "Apple"));
 console.log(lastIndexOf([1, 1, 2, 3, 1, 3], 1)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 4.  allIndexOf
 Create a function which returns all indexes of an item from a given array.
 Notes:  Please use loop
@@ -99,6 +105,8 @@ Related Topics: Function, Loop, Array */
 };
 console.log(allIndexOf(["Apple", "Orange", "Apple", "Mango"], "Apple"));
 console.log(allIndexOf([1, 1, 2, 3, 1, 3], 1)); */
+
+////////////////////////////////////////////////////////////////
 
 /* 5.  addPostfix
 Create a function which adds a postfix to a given array items.
@@ -134,6 +142,8 @@ console.log(addPostfix(["Apple", "Orange", "Apple", "Mango"], "+")); */
 };
 console.log(addPostfix(["Apple", "Orange", "Apple", "Mango"], "+")); */
 
+////////////////////////////////////////////////////////////////
+
 /* 6.  addPostfixMiddle
 Create a function which adds postfix between array items and convert to a string.
 `addPostfixMiddle(["Apple", "Orange", "Kiwi"], "and")` 
@@ -144,6 +154,8 @@ Related Topics: Function, Array */
   return arr.join(` ${str} `);
 };
 console.log(addPostfixMiddle(["Apple", "Orange", "Kiwi"], "and")); */
+
+////////////////////////////////////////////////////////////////
 
 /* 7.  countItem
 Create a function which finds how many item inside a given array.
@@ -159,6 +171,8 @@ Related Topics: Function, Loop, Array */
   return counter;
 };
 console.log(countItem([1, 2, 4, 5, 8, 5, 1, 5], 5)); */
+
+////////////////////////////////////////////////////////////////
 
 /* 8.  sumAll
 Create a function which finds sum of all elements from a given array
@@ -186,6 +200,8 @@ console.log(sumAll([1, 2, 3, 4])); */
 };
 console.log(sumAll([1, 2, 3, 4])); */
 
+////////////////////////////////////////////////////////////////
+
 /* 9.  sumAllNums
 Create a function which returns sum of all numbers from a given array. [1,{}, null,2] => 3
 `sumAllNums([1,{}, null,2]) // 3`
@@ -202,6 +218,8 @@ Related Topics: Function, Loop, Array, typeof, NaN */
 };
 console.log(sumAllNums([1, {}, null, 2]));
 console.log(sumAllNums(["1", NaN, null, 2])); */
+
+////////////////////////////////////////////////////////////////
 
 /* 10.  filterChar
 Create a function to filter all chars which are not equal to a given char from an arrays. ['a','b','A','c'], 'a' => ['b','c']
@@ -269,6 +287,8 @@ console.log(filterChar([1, "1", "c"], 1)); */
 console.log(filterChar(["a", "b", "A", "c"], "a"));
 console.log(filterChar([1, "1", "c"], 1)); */
 
+////////////////////////////////////////////////////////////////
+
 /* 11.  sortStr
 Create a function to sort a given string "gtdebca";
 NOTE: use **sort;**
@@ -294,6 +314,8 @@ console.log(sortStr("seattle")); */
 console.log(sortStr("gtdebca"));
 console.log(sortStr("seattle")); */
 
+////////////////////////////////////////////////////////////////
+
 /* 12.  sortNums
 Create a function to sort numbers in a given array [20, 18, 10, 5];
 `sortNums([20, 18, 10, 5]) // [5, 10, 18, 20]
@@ -305,6 +327,8 @@ Related Topics: Function, Sort */
 };
 console.log(sortNums([20, 18, 10, 5]));
 console.log(sortNums([5, 1, 0, -4])); */
+
+////////////////////////////////////////////////////////////////
 
 /* 13.  replace1
 Create a function to remove 2 items starting from a index of a given item and add a new item.
@@ -335,6 +359,8 @@ console.log(
   replace1(["Banana", "Orange", "Apple", "Mango"], "Orange", 2, "Melon")
 );
 console.log(replace1([5, 1, 0, -4], 1, 2, 9)); */
+
+////////////////////////////////////////////////////////////////
 
 /* 14.  merge
 Create a function to merge all given arrays into a array.
@@ -383,6 +409,8 @@ console.log(
 }
 console.log(merge(["Banana", "Orange", "Mango"], ["Orange", "Melon"])); */
 
+////////////////////////////////////////////////////////////////
+
 /* 15.  merge
 Create a function to merge all given arrays into a array.
 *Note: we don't know how many parameters
@@ -395,6 +423,8 @@ Related Topics: Function, Array, Arguments */
   return output;
 }
 console.log(merge([1], [2], [3, 4], [5])); */
+
+////////////////////////////////////////////////////////////////
 
 /* 16.  clean
 Create a function to remove all spaces from a given string.
@@ -418,6 +448,8 @@ console.log(clean("       He  llo  World!        ")); */
   return result;
 }
 console.log(clean("       He  llo  World!        ")); */
+
+////////////////////////////////////////////////////////////////
 
 /* 17.  indexOf
 Implement custom indexOf method
@@ -446,6 +478,8 @@ console.log(indexOf("California", "i")); */
 }
 console.log(indexOf("California", "i")); */
 
+////////////////////////////////////////////////////////////////
+
 /* 18.  lastIndexOf
 Implement lastIndexOf method.
 `const students = [1,2,3,4,2];
@@ -471,6 +505,8 @@ console.log(lastIndexOf([1, 2, 3, 4, 2], 2));
 console.log(lastIndexOf(["a", "s", "c", "a", "b"], "a"));
 console.log(lastIndexOf(["a", "s", "c", "a"], "d")); */
 
+////////////////////////////////////////////////////////////////
+
 /* 19.  includes
 Implement includes method.
 `const students = ["Aizat", "Kach", "Jantai", "Aidar"];
@@ -491,6 +527,8 @@ console.log(includes(["Aizat", "Kach", "Jantai", "Aidar"], "Jantai")); */
   return false;
 }
 console.log(includes(["Aizat", "Kach", "Jantai", "Aidar"], "Jantai")); */
+
+////////////////////////////////////////////////////////////////
 
 /* 20.  removeNumbersLargerThan
 Write a function called "removeNumbersLargerThan".
@@ -519,3 +557,350 @@ function removeNumbersLargerThan(num, obj) {
   }
 }
 console.log(removeNumbersLargerThan(5, obj)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 21.  removeNumbersLessThan
+Write a function called "removeNumbersLessThan".
+Given a number and an object, "removeNumbersLessThan" removes any properties whose values are numbers less than the given number.
+var obj = {
+  a: 8,
+  b: 2,
+  c: 'montana'
+}
+removeNumbersLessThan(5, obj);
+console.log(obj); // --> { a: 8, c: 'montana' }
+Related Topics: Function, Object */
+
+/* var obj = {
+  a: 8,
+  b: 2,
+  c: "motana",
+};
+
+function removeNumbersLessThan(num, obj) {
+  for (let key in obj) {
+    if (obj[key] < num) {
+      delete obj[key];
+    }
+  }
+  return obj;
+}
+console.log(removeNumbersLessThan(5, obj)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 22.  removeStringValuesLongerThan
+Write a function called "removeStringValuesLongerThan".
+Given an number and an object, "removeStringValuesLongerThan" removes any properties on the given object whose values are strings longer than the given number.
+var obj = {
+  name: 'Montana',
+  age: 20,
+  location: 'Texas'
+};
+removeStringValuesLongerThan(6, obj);
+console.log(obj); // { age: 20, location: 'Texas' }
+Related Topics: Function, Object */
+
+/* var obj = {
+  name: "Montana",
+  age: 20,
+  location: "Texas",
+};
+
+function removeStringValuesLongerThan(num, obj) {
+  for (let key in obj) {
+    if (obj[key].length > num) delete obj[key];
+  }
+  return obj;
+}
+console.log(removeStringValuesLongerThan(6, obj)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 23.  removeEvenValues
+Write a function called "removeEvenValues".
+Given any object, "removeEvenValues" removes any properties whose values are even numbers.
+Do this in place and return the original object, do not construct a cloned object that omits the properties.
+var obj = {
+  a: 2,
+  b: 3,
+  c: 4
+};
+removeEvenValues(obj);
+console.log(obj); // --> { b: 3 }
+Note: Remember, we are talking about any object, not just the one shown in the sample.
+Related Topics: Function, Object */
+
+/* var obj = {
+  a: 2,
+  b: 3,
+  c: 4,
+};
+
+function removeEvenValues(obj) {
+  for (let key in obj) {
+    if (obj[key] % 2 === 0) delete obj[key];
+  }
+  return obj;
+}
+console.log(removeEvenValues(obj)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 24.  countNumberOfKeys
+Write a function called "countNumberOfKeys".
+Given an object, "countNumberOfKeys" returns how many properties the given object has.
+var obj = {
+  a: 1,
+  b: 2,
+  c: 3
+};
+var output = countNumberOfKeys(obj);
+console.log(output); // --> 3
+Related Topics: Function, Object */
+
+/* var obj = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+
+// 1st way
+function countNumberOfKeys(obj) {
+  return Object.entries(obj).length;
+}
+console.log(countNumberOfKeys(obj)); */
+
+// 2nd way
+/* function countNumberOfKeys(obj) {
+  let counter = 0;
+  for (let key in obj) {
+    counter++;
+  }
+  return counter;
+}
+console.log(countNumberOfKeys(obj)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 25.  removeOddValues
+Write a function called "removeOddValues".
+Given an object, "removeOddValues" removes any properties whose valuse are odd numbers.
+var obj = {
+  a: 2,
+  b: 3,
+  c: 4
+};
+removeOddValues(obj);
+console.log(obj); // --> { a: 2, c: 4 }
+Related Topics: Function, Object */
+
+/* var obj = {
+  a: 2,
+  b: 3,
+  c: 4,
+};
+
+function removeOddValues(obj) {
+  for (let key in obj) {
+    if (obj[key] % 2 !== 0) delete obj[key];
+  }
+  return obj;
+}
+console.log(removeOddValues(obj)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 26.  removeArrayValues
+Write a function called "removeArrayValues".
+Given an object, "removeArrayValues" removes any properties whose values are arrays.
+var obj = {
+  a: [1, 3, 4],
+  b: 2,
+  c: ['hi', 'there']
+}
+removeArrayValues(obj);
+console.log(obj); // --> { b: 2 }
+Related Topics: Function, Object */
+
+/* var obj = {
+  a: [1, 3, 4],
+  b: 2,
+  c: ["hi", "there"],
+};
+
+function removeArrayValues(obj) {
+  for (let key in obj) {
+    if (Array.isArray(obj[key])) {
+      delete obj[key];
+    }
+  }
+  return obj;
+}
+console.log(removeArrayValues(obj)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 27.  removeNumberValues
+Write a function called "removeNumberValues".
+Given an object, "removeNumberValues" removes any properties whose valuse are numbers.
+var obj = {
+  a: 2,
+  b: 'remaining',
+  c: 4
+};
+removeNumberValues(obj);
+console.log(obj); // --> { b: 'remaining' }
+Related Topics: Function, Object */
+
+/* var obj = {
+  a: 2,
+  b: "remaining",
+  c: 4,
+};
+
+function removeNumberValues(obj) {
+  for (let key in obj) {
+    switch (true) {
+      case typeof obj[key] === "number":
+        delete obj[key];
+        break;
+      default:
+    }
+  }
+  return obj;
+}
+console.log(removeNumberValues(obj)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 28.  removeStringValues
+Write a function called "removeStringValues".
+Given an object, "removeStringValues" removes any properties on the given object whose values are strings.
+var obj = {
+  name: 'Sam',
+  age: 20
+}
+removeStringValues(obj);
+console.log(obj); // { age: 20 }
+Related Topics: Function, Object */
+
+/* var obj = {
+  name: "Sam",
+  age: 20,
+};
+
+function removeStringValues(obj) {
+  for (let key in obj) {
+    switch (true) {
+      case typeof obj[key] === "string":
+        delete obj[key];
+        break;
+      default:
+    }
+  }
+  return obj;
+}
+console.log(removeStringValues(obj)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 29.  select
+Write a function called "select".
+Given an array and an object, "select" returns a new object whose properties are those in the given object AND whose keys are present in the given array.
+Notes:  If keys are present in the given array, but are not in the given object, it should ignore them.
+It does not modify the passed in object.
+var arr = ['a', 'c', 'e'];
+var obj = {
+  a: 1,
+  b: 2,
+  c: 3,
+  d: 4
+};
+var output = select(arr, obj);
+console.log(output); // --> { a: 1, c: 3 }
+Related Topics: Function, Object */
+
+/* var arr = ["a", "c", "e"];
+var obj = {
+  a: 1,
+  b: 2,
+  c: 3,
+  d: 4,
+};
+
+// 1st way - used for...of loop
+function select(arr, obj) {
+  let newObj = {};
+  for (let el of arr) {
+    if (obj[el]) {
+      newObj[el] = obj[el];
+    }
+  }
+  return newObj;
+}
+console.log(select(arr, obj)); */
+
+// 2nd way - used regular for loop
+/* function select(arr, obj) {
+  const newObject = {};
+  for (let i = 0; i < arr.length; i++) {
+    if (obj[arr[i]]) {
+      newObject[arr[i]] = obj[arr[i]];
+    }
+  }
+  return newObject;
+}
+console.log(select(arr, obj)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 30.  getOddElementsAtProperty
+Write a function called "getOddElementsAtProperty".
+Given an object and a key, "getOddElementsAtProperty" returns an array containing all the odd elements of the array located at the given key.
+Notes:  If the array is empty, it should return an empty array.
+If it contains no odd elements, it should return an empty array.
+If the property at the given key is not an array, it should return an empty array.
+If there is no property at the key, it should return an empty array.
+var obj = {
+  key: [1, 2, 3, 4, 5]
+};
+var output = getOddElementsAtProperty(obj, 'key');
+console.log(output); // --> [1, 3, 5]
+Related Topics: Function, Object */
+
+/* var obj = {
+  key: [1, 2, 3, 4, 5],
+};
+
+// 1st way
+function getOddElementsAtProperty(obj, key) {
+  if (!Array.isArray(obj[key])) return [];
+  return obj[key].filter((el) => el % 2 !== 0);
+}
+console.log(getOddElementsAtProperty(obj, "key")); */
+
+// 2nd way - same array
+/* function getOddElementsAtProperty(obj, key) {
+  if (!Array.isArray(obj[key])) return [];
+  for (let i = obj[key].length - 1; i >= 0; i--) {
+    if (obj[key][i] % 2 === 0) {
+      obj[key].splice(i, 1);
+    }
+  }
+  return obj[key];
+}
+console.log(getOddElementsAtProperty(obj, "key")); */
+
+// 3rd way - new array
+/* function getOddElementsAtProperty(obj, key) {
+  let result = [];
+  if (!obj[key]) return result;
+  if (!Array.isArray(obj[key])) return result;
+  for (let i = 0; i < obj[key].length; i++) {
+    if (obj[key][i] % 2 === 1) result.push(obj[key][i]);
+  }
+  return result;
+}
+console.log(getOddElementsAtProperty(obj, "key")); */
