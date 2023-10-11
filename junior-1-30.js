@@ -268,3 +268,254 @@ console.log(filterChar([1, "1", "c"], 1)); */
 };
 console.log(filterChar(["a", "b", "A", "c"], "a"));
 console.log(filterChar([1, "1", "c"], 1)); */
+
+/* 11.  sortStr
+Create a function to sort a given string "gtdebca";
+NOTE: use **sort;**
+`sortStr("gtdebca") // "abcdegt"
+sortStr("seattle") // "aeelstt"`
+Related Topics: Function, Sort */
+
+// 1st way
+/* const sortStr = (str) => {
+  return str.split("").sort().join("");
+};
+console.log(sortStr("gtdebca"));
+console.log(sortStr("seattle")); */
+
+// 2nd way
+/* const sortStr = (str) => {
+  let output = [];
+  for (let i = 0; i < str.length; i++) {
+    output.push(str[i]);
+  }
+  return output.sort().join("");
+};
+console.log(sortStr("gtdebca"));
+console.log(sortStr("seattle")); */
+
+/* 12.  sortNums
+Create a function to sort numbers in a given array [20, 18, 10, 5];
+`sortNums([20, 18, 10, 5]) // [5, 10, 18, 20]
+sortNums([5,1,0-4]) // [-4,0,1,5]`
+Related Topics: Function, Sort */
+
+/* const sortNums = (arr) => {
+  return arr.sort((x, y) => x - y);
+};
+console.log(sortNums([20, 18, 10, 5]));
+console.log(sortNums([5, 1, 0, -4])); */
+
+/* 13.  replace1
+Create a function to remove 2 items starting from a index of a given item and add a new item.
+`replace1(["Banana", "Orange", "Apple", "Mango"], "Orange", 2, "Melon") // ["Banana", "Melon", "Mango"]
+replace1([5,1,0,-4], 1, 2, 9) // [5,9,-4]`
+Related Topics: Function, Array */
+
+// 1st way
+/* const replace1 = (arr, item, removeCount, value) => {
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (arr[i] === item) {
+      arr.splice(i, removeCount, value);
+    }
+  }
+  return arr;
+};
+console.log(
+  replace1(["Banana", "Orange", "Apple", "Mango"], "Orange", 2, "Melon")
+);
+console.log(replace1([5, 1, 0, -4], 1, 2, 9)); */
+
+// 2nd way
+/* const replace1 = (arr, item, removeCount, value) => {
+  arr.splice(arr.indexOf(item), removeCount, value);
+  return arr;
+};
+console.log(
+  replace1(["Banana", "Orange", "Apple", "Mango"], "Orange", 2, "Melon")
+);
+console.log(replace1([5, 1, 0, -4], 1, 2, 9)); */
+
+/* 14.  merge
+Create a function to merge all given arrays into a array.
+*Note: we don't know how many parameters are there.
+*Link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
+merge(["Banana", "Orange", "Mango"], ["Orange", "Melon"]) 
+// ["Banana", "Orange", "Mango","Orange", "Melon"]
+Related Topics: Function, Array, Arguments */
+
+// 1st way - works for multiple arrays - correct way
+/* function merge() {
+  let result = [];
+  result = result.concat(...arguments);
+  return result;
+}
+console.log(
+  merge(["Banana", "Orange", "Mango"], ["Orange", "Melon"], ["kivi", "milk"])
+); */
+
+// 2nd way - works for multiple arrays - kinda correct way
+/* function merge() {
+  let result = "";
+  for (let i = 0; i < arguments.length; i++) {
+    result += arguments[i] + ",";
+  }
+  let splited = result.split(",");
+  splited.splice(splited.length - 1, 1);
+  return splited;
+}
+console.log(
+  merge(
+    ["Banana", "Orange", "Mango"],
+    ["Orange", "Melon"],
+    ["kivi", "milk"],
+    ["youghrt", "meat"]
+  )
+); */
+
+// 3rd way - works for two arrays - not exact correct
+/* function merge() {
+  let result;
+  for (let i = 0; i < arguments.length; i++) {
+    result = arguments[0].concat(arguments[i]);
+  }
+  return result;
+}
+console.log(merge(["Banana", "Orange", "Mango"], ["Orange", "Melon"])); */
+
+/* 15.  merge
+Create a function to merge all given arrays into a array.
+*Note: we don't know how many parameters
+`merge([1],[2],[3,4],[5]) // [1,2,3,4,5]`
+Related Topics: Function, Array, Arguments */
+
+/* function merge() {
+  let output = [];
+  output = output.concat(...arguments);
+  return output;
+}
+console.log(merge([1], [2], [3, 4], [5])); */
+
+/* 16.  clean
+Create a function to remove all spaces from a given string.
+`clean("       He  llo  World!        ") // HelloWorld!`
+Related Topics: Function, Array */
+
+// 1st way
+/* function clean(str) {
+  return str.replaceAll(" ", "");
+}
+console.log(clean("       He  llo  World!        ")); */
+
+// 2nd way
+/* function clean(str) {
+  let result = "";
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== " ") {
+      result += str[i];
+    }
+  }
+  return result;
+}
+console.log(clean("       He  llo  World!        ")); */
+
+/* 17.  indexOf
+Implement custom indexOf method
+`const str = "California";
+str.indexOfCus("i") // 3;`
+Related Topics: Function */
+
+// 1st way
+/* function indexOf(str, char) {
+  return str.indexOf(char);
+}
+console.log(indexOf("California", "i")); */
+
+// 2nd way
+/* function indexOf(str, char) {
+  let i = 0;
+  while (i < str.length) {
+    switch (true) {
+      case str[i] === char:
+        return i;
+      default:
+    }
+    i++;
+  }
+  return -1;
+}
+console.log(indexOf("California", "i")); */
+
+/* 18.  lastIndexOf
+Implement lastIndexOf method.
+`const students = [1,2,3,4,2];
+students.lastIndexOf(2);  // 4`
+Related Topics: Function, Array */
+
+// 1st way
+/* function lastIndexOf(arr, lastNum) {
+  return arr.lastIndexOf(lastNum);
+}
+console.log(lastIndexOf([1, 2, 3, 4, 2], 2)); */
+
+// 2nd way
+/* function lastIndexOf(arr, lastNum) {
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (arr[i] === lastNum) {
+      return i;
+    }
+  }
+  return -1;
+}
+console.log(lastIndexOf([1, 2, 3, 4, 2], 2));
+console.log(lastIndexOf(["a", "s", "c", "a", "b"], "a"));
+console.log(lastIndexOf(["a", "s", "c", "a"], "d")); */
+
+/* 19.  includes
+Implement includes method.
+`const students = ["Aizat", "Kach", "Jantai", "Aidar"];
+students.includes('Jantai');  // true`
+Related Topics: Function, Array */
+
+// 1st way
+/* function includes(arr, str) {
+  return arr.includes(str);
+}
+console.log(includes(["Aizat", "Kach", "Jantai", "Aidar"], "Jantai")); */
+
+// 2nd way
+/* function includes(arr, str) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === str) return true;
+  }
+  return false;
+}
+console.log(includes(["Aizat", "Kach", "Jantai", "Aidar"], "Jantai")); */
+
+/* 20.  removeNumbersLargerThan
+Write a function called "removeNumbersLargerThan".
+Given a number and an object, "removeNumbersLargerThan" removes any properties whose values are numbers greater than the given number.
+var obj = {
+  a: 8,
+  b: 2,
+  c: 'montana'
+}
+removeNumbersLargerThan(5, obj);
+console.log(obj); // --> { b: 2, c: 'montana' }
+Related Topics: Function, Object */
+
+/* var obj = {
+  a: 8,
+  b: 2,
+  c: "montana",
+};
+
+function removeNumbersLargerThan(num, obj) {
+  for (let key in obj) {
+    if (obj[key] > num) {
+      delete obj[key];
+      return obj;
+    }
+  }
+}
+console.log(removeNumbersLargerThan(5, obj)); */
