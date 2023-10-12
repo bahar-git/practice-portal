@@ -302,3 +302,253 @@ Related Topics: Function */
 console.log(calculateBillTotal(20)); */
 
 ////////////////////////////////////////////////////////////////
+
+/* 41.  printAverage0fArray
+Analyze an array's values and print the average.
+var arr = [1,2,3,4]
+`printAverage0fArray(arr) // 2.5`
+Related Topics: Function, Array */
+
+/* function printAverage0fArray(arr) {
+  let sum = 0;
+  for (let el of arr) {
+    sum += el;
+  }
+  return sum / arr.length;
+}
+console.log(printAverage0fArray([1, 2, 3, 4]));
+console.log(printAverage0fArray([100, 50, 24])); */
+
+////////////////////////////////////////////////////////////////
+
+/* 42.  returnOdds
+Return Odds from an Array
+returnOdds([1,2,3,4]) // [1,3]
+Related Topics: Function, Array */
+
+// 1st way
+/* const returnOdds = (arr) => {
+  return arr.filter((el) => el % 2 !== 0);
+};
+console.log(returnOdds([1, 2, 3, 4])); */
+
+// 2nd way - same array
+/* const returnOdds = (arr) => {
+  let i = arr.length - 1;
+  while (i >= 0) {
+    if (arr[i] % 2 === 0) {
+      arr.splice(i, 1);
+    }
+    i--;
+  }
+  return arr;
+};
+console.log(returnOdds([1, 2, 3, 4])); */
+
+// 3rd way - new array
+/* const returnOdds = (arr) => {
+  let output = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 !== 0) output.push(arr[i]);
+  }
+  return output;
+};
+console.log(returnOdds([1, 2, 3, 4])); */
+
+////////////////////////////////////////////////////////////////
+
+/* 43.  Return Array Count Greater than Y.
+Given an array and a value Y. count and print the number of array values greater than Y.
+`countGreaterThanY([1,2,3], 2) //1`
+`countGreaterThanY([2,2,2], 0) //3`
+Related Topics: Function, Array */
+
+/* const countGreaterThanY = (arr, y) => {
+  let counter = 0;
+  for (let el of arr) {
+    if (el > y) counter++;
+  }
+  return counter;
+};
+console.log(countGreaterThanY([1, 2, 3], 2));
+console.log(countGreaterThanY([2, 2, 2], 0)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 44.  printMax
+Given an array, print the max.
+`printMax([1,-12,3,1,0]) //3`
+`printMax([2,2,2]) //2`
+Related Topics: Function, Array */
+
+// 1st way
+/* const printMax = (arr) => {
+  let result = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (result < arr[i]) result = arr[i];
+  }
+  return result;
+};
+console.log(printMax([1, -12, 3, 1, 0]));
+console.log(printMax([2, 2, 2])); */
+
+// 2nd way
+/* const printMax = (arr) => {
+  return Math.max(...arr);
+};
+console.log(printMax([1, -12, 3, 1, 0]));
+console.log(printMax([2, 2, 2])); */
+
+////////////////////////////////////////////////////////////////
+
+/* 45.  scaleArr
+Given array arr and number num, multiply each arr value by num, and return the changed arr.
+`scale([2,3,4],5) // [10,15,20]`
+Related Topics: Function, Array */
+
+// 1st way - new array
+/* const scaleArr = (arr, num) => {
+  let output = [];
+  for (let el of arr) {
+    output.push(el * num);
+  }
+  return output;
+};
+console.log(scaleArr([2, 3, 4], 5)); */
+
+// 2nd way - same array
+/* const scaleArr = (arr, num) => {
+  for (let i = arr.length - 1; i >= 0; i--) {
+    arr[i] = arr[i] * num;
+  }
+  return arr;
+};
+console.log(scaleArr([2, 3, 4], 5)); */
+
+// 3rd way
+/* const scaleArr = (arr, num) => {
+  return arr.map((el) => el * num);
+};
+console.log(scaleArr([2, 3, 4], 5)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 46.  reverse
+Reverse Array.
+Given array, write a function to reverse values in-place.
+`reverse([34,6,4,2]) // [2,4,6,34]`
+Related Topics: Function, Array */
+
+/* function reverse(arr) {
+  let output = [];
+  if (Array.isArray(arr)) {
+    for (let i = arr.length - 1; i >= 0; i--) {
+      output.push(arr[i]);
+    }
+  } else {
+    for (let i = arguments.length - 1; i >= 0; i--) {
+      output.push(arguments[i]);
+    }
+  }
+  return output;
+}
+console.log(reverse([34, 6, 4, 2]));
+console.log(reverse("a", "c", "b", "d")); */
+
+////////////////////////////////////////////////////////////////
+
+/* 47.  squareArrayVals
+Square each value in a given array, returning that same array with changed values.
+`squareArrayVals(arr)`
+Related Topics: Function, Array */
+
+// 1st way
+/* function squareArrayVals() {
+  let arr = arguments[0];
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i] ** 2;
+  }
+  return arr;
+}
+console.log(squareArrayVals([2, 3, 4]));
+console.log(squareArrayVals([1, 10, 30])); */
+
+// 2nd way
+/* function squareArrayVals() {
+  let arr = arguments[0];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    arr.splice(i, 1, arr[i] ** 2);
+  }
+  return arr;
+}
+console.log(squareArrayVals([2, 3, 4]));
+console.log(squareArrayVals([1, 10, 30])); */
+
+////////////////////////////////////////////////////////////////
+
+/* 48.  zeroOutArrayNegativeVals
+Zero Out Array Negative Numbers
+Return the given array, after setting any negative values to zero.
+`zeroOutArrayNegativeVals(arr)`
+Related Topics: Function, Array */
+
+// 1st way
+/* function zeroOutArrayNegativeVals() {
+  let arr = arguments[0];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (arr[i] < 1) {
+      arr.splice(i, 1, 0);
+    }
+  }
+  return arr;
+}
+console.log(zeroOutArrayNegativeVals([1, 10, -30]));
+console.log(zeroOutArrayNegativeVals([1, 10, 30])); */
+
+// 2nd way
+/* function zeroOutArrayNegativeVals() {
+  let arr = arguments[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < 1) {
+      arr[i] = 0;
+    }
+  }
+  return arr;
+}
+console.log(zeroOutArrayNegativeVals([1, 10, -30]));
+console.log(zeroOutArrayNegativeVals([1, 10, 30])); */
+
+////////////////////////////////////////////////////////////////
+
+/* 49.  sigma
+Implement function sigma(num) that given a number, returns the sum of all positive integers to number (inclusive).
+`sigma(5) // 15 (1 + 2 + 3 + 4 + 5)`
+Related Topics: Function, Loop */
+
+/* function sigma() {
+  let sum = 0;
+  let num = arguments[0];
+  for (let i = 1; i <= num; i++) {
+    sum += i;
+  }
+  return sum;
+}
+console.log(sigma(5)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 50.  factorial
+Write a function factorial(num) that, given a number, returns the product (multiplication) of all positive integers from 1 up to number (inclusive).
+`factorial (5) = 120 (or 1 * 2 * 3 * 4 * 5)`
+Related Topics: Function, Loop */
+
+/* function factorial(num) {
+  let sum = 1;
+  let i = 1;
+  while (i <= num) {
+    sum *= i;
+    i++;
+  }
+  return sum;
+}
+console.log(factorial(5)); */
