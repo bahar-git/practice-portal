@@ -826,3 +826,154 @@ console.log(getAllKeys(obj)); */
   return Object.keys(obj);
 }
 console.log(getAllKeys(obj)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 61.  fromListToObject
+Write a function called "fromListToObject".
+Convert array to an object as it's shown here.
+var arr = [[1,2],['a','b']]
+fromListToObject(arr)
+// {1:2, a:'b'}
+Related Topics: Function, Object */
+
+/* function fromListToObject(arr) {
+  let obj = {};
+  for (let el of arr) {
+    obj[el[0]] = el[1];
+  }
+  return obj;
+}
+console.log(
+  fromListToObject([
+    [1, 2],
+    ["a", "b"],
+  ])
+); */
+
+////////////////////////////////////////////////////////////////
+
+/* 62.  listAllValues
+Write a function called "listAllValues".
+List all values
+var obj = {1:2, a:'b'}
+listAllValues(obj) // [2,'b']
+Related Topics: Function, Object */
+
+/* var obj = { 1: 2, a: "b" };
+
+// 1st way
+function listAllValues(obj) {
+  let arr = [];
+  for (let key in obj) {
+    arr.push(obj[key]);
+  }
+  return arr;
+}
+console.log(listAllValues(obj)); */
+
+// 2nd way
+/* function listAllValues(obj) {
+  return Object.values(obj);
+}
+console.log(listAllValues(obj)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 63.  transform
+Write a function called "transform".
+Transform employee data to an array.
+var obj = {name:"meet", location:'online'}
+transform(obj)
+// ["name", "meet", "location", "online"]
+Related Topics: Function, Object */
+
+/* var obj = { name: "meet", location: "online" };
+
+const transform = (obj) => {
+  let arr = [];
+  for (let key in obj) {
+    arr.push(key, obj[key]);
+  }
+  return arr;
+};
+console.log(transform(obj)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 64.  greetCustomer
+Greet customer and return a text.
+var obj = {name: "Express", lastName: "Co"}
+greetCustomer(obj) // "Welcome Express Co"
+Related Topics: Function, Object */
+
+/* var obj = { name: "Express", lastName: "Co" };
+
+function greetCustomer(obj) {
+  return `Welcome ${obj.name} ${obj.lastName}`;
+}
+console.log(greetCustomer(obj)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 65.  convertStr1
+Convert url to an object
+var url = "www.food.express.co/delivery/menu/cake"
+// {0: 'delivery', 1:'menu', 2:'cake'}
+Related Topics: Function, Object */
+
+/* function convertStr1(url) {
+  let obj = {};
+  let arr = url.split("/");
+  arr.shift();
+  for (let i = 0; i < arr.length; i++) {
+    obj[i] = arr[i];
+  }
+  return obj;
+}
+console.log(convertStr1("www.food.express.co/delivery/menu/cake"));
+console.log(convertStr1("www.depositphotos.co/themes/kids")); */
+
+////////////////////////////////////////////////////////////////
+
+/* 66.  getParams
+Convert url to an object
+var url = "http//food.express.co/?age=10&loc=seattle&type=cafe"
+getParams(url)
+// {age: 10, loc:'seattle', type:'cafe'}
+Related Topics: Function, Object */
+
+/* function getParams(url) {
+  let obj = {};
+  let arrPrep = url.split(/[/?&]+/);
+  arrPrep.splice(0, 2);
+  let arr = [];
+  for (let el of arrPrep) {
+    arr.push(el.split("="));
+  }
+  for (let el of arr) {
+    obj[el[0]] = el[1];
+  }
+  return obj;
+}
+console.log(getParams("http//food.express.co/?age=10&loc=seattle&type=cafe"));
+console.log(getParams("http//food.express.co/?test=5&a=b&c=d&e=f")); */
+
+////////////////////////////////////////////////////////////////
+
+/* 67.  getDomain
+Convert url to an object
+var url = "https//food.express.co"
+getDomain(url)
+// {type: "https", domain:'express', subDomain:'food'}
+Related Topics: Function, Object */
+
+/* function getDomain(url) {
+  let obj = {};
+  let arr = url.split(/[/.]+/);
+  obj.type = arr[0];
+  obj.domain = arr[2];
+  obj.subDomain = arr[1];
+  return obj;
+}
+console.log(getDomain("https//food.express.co")); */
