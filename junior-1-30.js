@@ -323,7 +323,7 @@ sortNums([5,1,0-4]) // [-4,0,1,5]`
 Related Topics: Function, Sort */
 
 /* const sortNums = (arr) => {
-  return arr.sort((x, y) => x - y);
+  return arr.sort((a, b) => a - b);
 };
 console.log(sortNums([20, 18, 10, 5]));
 console.log(sortNums([5, 1, 0, -4])); */
