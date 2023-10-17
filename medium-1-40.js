@@ -804,3 +804,111 @@ console.log(removeDupChars("characters")); */
 }
 console.log(removeDupChars("sleep"));
 console.log(removeDupChars("characters")); */
+
+////////////////////////////////////////////////////////////////
+
+/* 27.  firstNonRepeatedCharacter
+Find the first non repeating char in a string?
+firstNonRepeatedCharacter('aabcbd')
+output: c
+Related Topics: Function */
+
+/* function firstNonRepeatedCharacter(str) {
+  let obj = {};
+  for (let i = 0; i < str.length; i++) {
+    if (!obj[str[i]]) {
+      obj[str[i]] = 1;
+    } else {
+      obj[str[i]] += 1;
+    }
+  }
+  for (let key in obj) {
+    if (obj[key] === 1) return key;
+  }
+}
+console.log(firstNonRepeatedCharacter("aabcbd")); */
+
+////////////////////////////////////////////////////////////////
+
+/* 28.  removeNegatives
+Array: Remove Negatives
+Implements removeNegatives() that accepts an array, removes negative values, and returns the same array (not a copy), preserving non-negatives’ order. As always, do not use build-in array functions.
+`removeNegatives([-1,2,-4,5]) // [2,5]`
+Related Topics: Function, Array */
+
+// 1st way - with a built-in array method
+/* function removeNegatives(arr) {
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (arr[i] < 0) arr.splice(i, 1);
+  }
+  return arr;
+}
+console.log(removeNegatives([-1, 2, -4, 5])); */
+
+// 2nd way - without built-in array methods
+/* function removeNegatives(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] < 0) {
+      for (let j = i; j < arr.length - 1; j++) {
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+      arr.pop();
+      i = 0;
+    }
+  }
+  return arr;
+}
+console.log(removeNegatives([-1, 2, -4, 5])); */
+
+////////////////////////////////////////////////////////////////
+
+/* 29.  secondLarge
+Array: Second-Largest
+Return the second-largest element of an array.
+`secondLarge([42,1,4,3,7]) // 7
+If array is too short, return null.`
+Related Topics: Function, Array */
+
+// 1st way
+/* function secondLarge() {
+  if (arguments[0].length < 2) return null;
+  return arguments[0].sort((a, b) => a - b)[arguments[0].length - 2];
+}
+console.log(secondLarge([42, 1, 4, 3, 7]));
+console.log(secondLarge([-1, 2, -4, 5])); */
+
+// 2nd way
+/* function secondLarge() {
+  if (arguments[0].length < 2) return null;
+  const arr = arguments[0].sort((a, b) => a - b);
+  return arr[arr.length - 2];
+}
+console.log(secondLarge([42, 1, 4, 3, 7]));
+console.log(secondLarge([-1, 2, -4, 5])); */
+
+// 3rd way
+/* function secondLarge() {
+  if (arguments[0].length < 2) return null;
+  let result = arguments[0].sort((a, b) => b - a);
+  return result[1];
+}
+console.log(secondLarge([42, 1, 4, 3, 7]));
+console.log(secondLarge([-1, 2, -4, 5])); */
+
+////////////////////////////////////////////////////////////////
+
+/* 30.  duplicate
+Create a function that changes a given array to list each original element twice, retaining original order.
+`duplicate([1,2,3]) // [1,1,2,2,3,3]`
+Related Topics: Function, Array */
+
+/* function duplicate(arr) {
+  for (let i = 0; i < arr.length; i = i + 2) {
+    arr.splice(i, 0, arr[i]);
+  }
+  return arr;
+}
+console.log(duplicate([1, 2, 3]));
+console.log(duplicate([-1, 2, -4, 5])); */
