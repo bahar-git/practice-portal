@@ -488,3 +488,319 @@ console.log(parameterize("Fluffy Whisker from Seattle")); */
   return result;
 };
 console.log(parameterize("Fluffy Whisker from Seattle")); */
+
+////////////////////////////////////////////////////////////////
+
+/* 16.  swapCase
+Write a function to swap cases.
+`swapCase('AaBbc'); // -> "aAbBC"`
+Related Topics: Function */
+
+// 1st way - string
+/* const swapCase = (str) => {
+  let result = "";
+  for (let i = 0; i < str.length; i++) {
+    str[i] === str[i].toUpperCase()
+      ? (result += str[i].toLowerCase())
+      : (result += str[i].toUpperCase());
+  }
+  return result;
+};
+console.log(swapCase("AaBbc")); */
+
+// 2nd way - array
+/* const swapCase = (str) => {
+  let arr = str.split("");
+  for (let i = arr.length - 1; i >= 0; i--) {
+    arr[i] === arr[i].toUpperCase()
+      ? (arr[i] = arr[i].toLowerCase())
+      : (arr[i] = arr[i].toUpperCase());
+  }
+  return arr.join("");
+};
+console.log(swapCase("AaBbc")); */
+
+////////////////////////////////////////////////////////////////
+
+/* 17.  repeat
+Write a JavaScript function to repeat a string a specified times.
+`repeat('a', 4) // 'aaaa'`
+Related Topics: Function */
+
+/* const repeat = (char, num) => {
+  let result = "";
+  let i = 1;
+  while (i <= num) {
+    result += char;
+    i++;
+  }
+  return result;
+};
+console.log(repeat("a", 4)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 18.  remove_first_occurrence
+Write a JavaScript function to remove the first occurrence of a given 'search string' from a string.
+`remove_first_occurrence("The quick brown fox jumps over the lazy dog", 'the')
+// "The quick brown fox jumps over lazy dog"`
+Related Topics: Function */
+
+/* const remove_first_occurrence = (str, word) => {
+  let arr = str.split(" ");
+  if (arr[0].toLowerCase() === word) {
+    arr.splice(0, 1);
+    return arr.join(" ");
+  } else {
+    return str.replace(word, "");
+  }
+};
+console.log(
+  remove_first_occurrence("The quick brown fox jumps over the lazy dog", "the")
+);
+console.log(
+  remove_first_occurrence("We are doing some exercises, they are easy", "are")
+); */
+
+////////////////////////////////////////////////////////////////
+
+/* 19.  sumToOne
+Implement sumToOne(num) that sums a given integer's digits repeatedly until the sum is only one digit. Return that one-digit result.
+`sumToOne(928) // 1 => 9+2+8=19 then 1+9=10, 1+0=1`
+Related Topics: Function */
+
+// 1st way - recursion
+/* function sumToOne(num) {
+  if (num < 10) return num;
+  let arr = String(num).split("");
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += +arr[i];
+  }
+  return sumToOne(sum);
+}
+console.log(sumToOne(928));
+console.log(sumToOne(185)); */
+
+// 2nd way
+/* function sumToOne(num) {
+  let tempNum = num;
+  while (tempNum > 9) {
+    let sum = 0;
+    let arr = tempNum.toString().split("");
+    for (let i = 0; i < arr.length; i++) {
+      sum += +arr[i];
+    }
+    tempNum = sum;
+  }
+  return tempNum;
+}
+console.log(sumToOne(928));
+console.log(sumToOne(185)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 20.  pushFront
+Array: Push Front
+Given array and an additional value, insert this value at the beginning of the array. Do this without using any built-in array methods.
+pushFront([1,2,3], 7) // [7,1,2,3]
+Related Topics: Function, Array */
+
+// 1st way
+/* const pushFront = (arr, value) => {
+  return [value, ...arr];
+};
+console.log(pushFront([1, 2, 3], 7)); */
+
+// 2nd way
+/* const pushFront = (arr, value) => {
+  for (let i = arr.length; i > 0; i--) {
+    arr[i] = arr[i - 1];
+  }
+  arr[0] = value;
+  return arr;
+};
+console.log(pushFront([1, 2, 3], 7)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 21.  popFront
+Array: Pop Front
+Given array, remove and return the value at the beginning of the array.
+Note:  Do this without using built-in array methods except pop().
+`popFront([1,2,3]) // 1`
+Related Topics: Function, Array */
+
+// 1st way
+/* const popFront = (arr) => {
+  let arrNum = arr[0];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    arrNum = [arr[i]];
+  }
+  return arrNum.pop();
+};
+console.log(popFront([1, 2, 3])); */
+
+// 2nd way
+/* const popFront = (arr) => {
+    return arr[0];
+  };
+  console.log(popFront([1, 2, 3])); */
+
+////////////////////////////////////////////////////////////////
+
+/* 22.  removeDup
+Array: Remove Duplicates
+Given a sorted array, remove duplicate values. Because array elements are already in order, all duplicate values will be grouped together.
+Notes:  As with all these array challenges, do this without using any built-in array methods.
+Solve this without using any nested loops.
+`removeDup([1,2,2,2,3,4,4]) // [1,2,3,4]`
+Related Topics: Function, Array */
+
+// 1st way - without built-in array methods
+/* function removeDup(arr) {
+  let obj = {};
+  for (let el of arr) {
+    if (!obj[el]) {
+      obj[el] = el;
+    }
+  }
+  return Object.values(obj);
+}
+console.log(removeDup([1, 2, 2, 2, 3, 4, 4])); */
+
+// 2nd way - with a built-in array method
+/* function removeDup(arr) {
+  let result = [arr[0]];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > result[result.length - 1]) result.push(arr[i]);
+  }
+  return result;
+}
+console.log(removeDup([1, 2, 2, 2, 3, 4, 4])); */
+
+////////////////////////////////////////////////////////////////
+
+/* 23.  reverse
+Array: Reverse
+Given a numerical array, reverse the order of values, in place. The reversed array should have the same length, with existing elements moved to other indices so that order of elements is reversed. Working ‘in-place’ means that you cannot use a second array - move values within the array that you are given. As always. do not use built-in array functions such as splice().
+`reverse([1,2,3,4]) // [4,3,2,1]`
+Related Topics: Function, Array */
+
+// 1st way - without built-in array methods
+/* function reverse(arr) {
+  for (let i = 0; i < arr.length / 2; i++) {
+    let temp = arr[i];
+    arr[i] = arr[arr.length - 1 - i];
+    arr[arr.length - 1 - i] = temp;
+  }
+  return arr;
+}
+console.log(reverse([1, 2, 3, 4])); */
+
+// 2nd way - with a built-in array method
+/* function reverse(arr) {
+  let result = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    result.push(arr[i]);
+  }
+  return result;
+}
+console.log(reverse([1, 2, 3, 4])); */
+
+////////////////////////////////////////////////////////////////
+
+/* 24.  filterRange
+Array: Filter Range
+Given array and values min and max, retain only the array values between min and max. Work in-place: return the array you are given, with values in original order.
+Note:  No built-in array functions.
+`filterRange([2,6,12,4,7,13,42,1], 3, 9) // [6, 4, 7]`
+Related Topics: Function, Array */
+
+// 1st way - without built-in array methods
+/* function filterRange(arr, min, max) {
+  let tempArr = [];
+  let index = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > min && arr[i] < max) {
+      tempArr[index] = arr[i];
+      index++;
+    }
+  }
+  arr = tempArr;
+  return arr;
+}
+console.log(filterRange([2, 6, 12, 4, 7, 13, 42, 1], 3, 9)); */
+
+// 2nd way - with a built-in array method
+/* function filterRange(arr, min, max) {
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (arr[i] <= min || arr[i] >= max) {
+      arr.splice(i, 1);
+    }
+  }
+  return arr;
+}
+console.log(filterRange([2, 6, 12, 4, 7, 13, 42, 1], 3, 9)); */
+
+// 3rd way - with a built-in array method
+/* function filterRange(arr, min, max) {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > min && arr[i] < max) result.push(arr[i]);
+  }
+  return result;
+}
+console.log(filterRange([2, 6, 12, 4, 7, 13, 42, 1], 3, 9)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 25.  arrConcat
+Array: Concat
+Replicate JavaScript's concat() built-in method . Create a standalone function that accepts two arrays. Return a new array containing the first array's elements, followed by the second array's elements. Do not alter the original arrays.
+`arrConcat(['a', 'b'],[1, 2]) // ['a','b',1,2].`
+Related Topics: Function, Array */
+
+/* function arrConcat(arr1, arr2) {
+  let result = [];
+  for (let i = 0; i < arr1.length; i++) {
+    result[i] = arr1[i];
+  }
+  for (let i = 0; i < arr2.length; i++) {
+    result[i + arr1.length] = arr2[i];
+  }
+  return result;
+}
+console.log(arrConcat(["a", "b"], [1, 2])); */
+
+////////////////////////////////////////////////////////////////
+
+/* 26.  removeDupChars
+Write a function called "removeDupChars".
+Given a string, return a string that every single character is unique in the output string.
+removeDupChars("sleep") // "slep"
+removeDupChars("characters") // "chartes" 
+Related Topics: Function */
+
+// 1st way
+/* function removeDupChars(str) {
+  let obj = {};
+  let result = "";
+  for (let i = 0; i < str.length; i++) {
+    if (!obj[str[i]]) {
+      obj[str[i]] = 1;
+      result += str[i];
+    }
+  }
+  return result;
+}
+console.log(removeDupChars("sleep"));
+console.log(removeDupChars("characters")); */
+
+// 2nd way
+/* function removeDupChars(str) {
+  let output = [...new Set(str)];
+  return output.join("");
+}
+console.log(removeDupChars("sleep"));
+console.log(removeDupChars("characters")); */
