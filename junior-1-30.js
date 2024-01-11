@@ -505,6 +505,20 @@ console.log(lastIndexOf([1, 2, 3, 4, 2], 2));
 console.log(lastIndexOf(["a", "s", "c", "a", "b"], "a"));
 console.log(lastIndexOf(["a", "s", "c", "a"], "d")); */
 
+// 3rd way
+/* function lastIndexOf(arr, lastNum) {
+  let output = -1;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === lastNum) {
+      output = i;
+    }
+  }
+  return output;
+}
+console.log(lastIndexOf([1, 2, 3, 4, 2], 2));
+console.log(lastIndexOf(["a", "s", "c", "a", "b"], "a"));
+console.log(lastIndexOf(["a", "s", "c", "a"], "d")); */
+
 ////////////////////////////////////////////////////////////////
 
 /* 19.  includes
@@ -550,11 +564,9 @@ Related Topics: Function, Object */
 
 function removeNumbersLargerThan(num, obj) {
   for (let key in obj) {
-    if (obj[key] > num) {
-      delete obj[key];
-      return obj;
-    }
+    if (obj[key] > num) delete obj[key];
   }
+  return obj;
 }
 console.log(removeNumbersLargerThan(5, obj)); */
 
@@ -885,6 +897,7 @@ console.log(getOddElementsAtProperty(obj, "key")); */
 /* function getOddElementsAtProperty(obj, key) {
   if (!Array.isArray(obj[key])) return [];
   for (let i = obj[key].length - 1; i >= 0; i--) {
+    // if(obj[key][i] % 2) //this also works, 0-false 1-true
     if (obj[key][i] % 2 === 0) {
       obj[key].splice(i, 1);
     }
@@ -899,6 +912,7 @@ console.log(getOddElementsAtProperty(obj, "key")); */
   if (!obj[key]) return result;
   if (!Array.isArray(obj[key])) return result;
   for (let i = 0; i < obj[key].length; i++) {
+    // if(obj[key][i] % 2) //this also works, 0-false 1-true
     if (obj[key][i] % 2 === 1) result.push(obj[key][i]);
   }
   return result;

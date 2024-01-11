@@ -439,6 +439,7 @@ Given array, write a function to reverse values in-place.
 `reverse([34,6,4,2]) // [2,4,6,34]`
 Related Topics: Function, Array */
 
+// 1st way
 /* function reverse(arr) {
   let output = [];
   if (Array.isArray(arr)) {
@@ -449,6 +450,19 @@ Related Topics: Function, Array */
     for (let i = arguments.length - 1; i >= 0; i--) {
       output.push(arguments[i]);
     }
+  }
+  return output;
+}
+console.log(reverse([34, 6, 4, 2]));
+console.log(reverse("a", "c", "b", "d")); */
+
+// 2nd way
+//(...arg) rest operator
+/* function reverse(...arg) {
+  const arr = arg.flat();
+  let output = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    output.push(arr[i]);
   }
   return output;
 }
@@ -570,6 +584,7 @@ Create a function which accepts cents, compute and print how to represent that a
 `out: [0,0,2,0,3]`
 Related Topics: Function, Array */
 
+// greedy algorithm
 /* function generateCoinChange(num) {
   const coinChange = {
     dollars: 100,
@@ -578,12 +593,20 @@ Related Topics: Function, Array */
     nickels: 5,
     pennies: 1,
   };
-  let output=[]
-
+  const values = Object.values(coinChange);
+  let position = 0;
+  let solution = [];
+  while (num) {
+    const times = Math.floor(num / values[position]);
+    const toRemove = times * values[position];
+    num = num - toRemove;
+    solution.push(times);
+    position++;
+  }
+  return solution;
 }
-console.log(generateCoinChange(194)); */
-
-// NEED TO SOLVE
+console.log(generateCoinChange(194));
+console.log(generateCoinChange(23)); */
 
 ////////////////////////////////////////////////////////////////
 
@@ -630,6 +653,25 @@ console.log(sumDigits(-316)); */
   return numbers.reduce((acc, currVal) => {
     return acc + currVal;
   });
+}
+console.log(sumDigits(1148));
+console.log(sumDigits(-316)); */
+
+// 3rd way
+/* function sumDigits(num) {
+  num = num.toString().split("");
+  if (num[0] === "-") {
+    const symbol = num.shift();
+    const second = num.shift();
+    const combineNum = symbol + second;
+    num.unshift(combineNum);
+  }
+
+  let sum = 0;
+  for (let i = 0; i < num.length; i++) {
+    sum += Number(num[i]);
+  }
+  return sum;
 }
 console.log(sumDigits(1148));
 console.log(sumDigits(-316)); */
@@ -733,12 +775,19 @@ var output = isOddWithoutModulo(17);
 console.log(output); // --> true
 Related Topics: Function */
 
+// 1st way
 /* function isOddWithoutModulo(num) {
   let result = false;
   let divided = Math.floor(num / 2);
   let remainder = num - divided * 2;
   if (remainder !== 0) result = true;
   return result;
+}
+console.log(isOddWithoutModulo(17)); */
+
+// 2nd way
+/* function isOddWithoutModulo(num) {
+  return !Number.isInteger(num / 2);
 }
 console.log(isOddWithoutModulo(17)); */
 
@@ -943,6 +992,8 @@ getParams(url)
 // {age: 10, loc:'seattle', type:'cafe'}
 Related Topics: Function, Object */
 
+// 1st way
+// result is not correct exactly, numbers should be in number not in string
 /* function getParams(url) {
   let obj = {};
   let arrPrep = url.split(/[/?&]+/);
@@ -955,6 +1006,56 @@ Related Topics: Function, Object */
     obj[el[0]] = el[1];
   }
   return obj;
+}
+console.log(getParams("http//food.express.co/?age=10&loc=seattle&type=cafe"));
+console.log(getParams("http//food.express.co/?test=5&a=b&c=d&e=f")); */
+
+// 2nd way
+/* function getParams(url) {
+  let obj = {};
+  let baseArr = url.split(/[?&]/);
+  baseArr.splice(0, 1);
+  for (let el of baseArr) {
+    const splitedEqual = el.split("=");
+    if (splitedEqual[1] == +splitedEqual[1]) {
+      obj[splitedEqual[0]] = +splitedEqual[1];
+    } else {
+      obj[splitedEqual[0]] = splitedEqual[1];
+    }
+  }
+  return obj;
+}
+console.log(getParams("http//food.express.co/?age=10&loc=seattle&type=cafe"));
+console.log(getParams("http//food.express.co/?test=5&a=b&c=d&e=f")); */
+
+// 3rd way
+/* function getParams(url) {
+  let result = {};
+  let splited = url.split(/[/.?&]+/);
+  let spliced = splited.splice(4, splited.length);
+  for (let i = 0; i < spliced.length; i++) {
+    let splitEqual = spliced[i].split("=");
+    if (splitEqual[1] == splitEqual[1]) {
+      let number = Number(splitEqual[1]);
+      if (isNaN(number)) number = splitEqual[1];
+      result[splitEqual[0]] = number;
+    }
+  }
+  return result;
+}
+console.log(getParams("http//food.express.co/?age=10&loc=seattle&type=cafe"));
+console.log(getParams("http//food.express.co/?test=5&a=b&c=d&e=f")); */
+
+// 4th way
+/* function getParams(url) {
+  let baseArr = url.split("?");
+  let arrPrep = baseArr[1].split("&");
+  let solution = arrPrep.reduce((accum, currVal) => {
+    const paramArr = currVal.split("=");
+    accum[paramArr[0]] = isNaN(+paramArr[1]) ? paramArr[1] : +paramArr[1];
+    return accum;
+  }, {});
+  return solution;
 }
 console.log(getParams("http//food.express.co/?age=10&loc=seattle&type=cafe"));
 console.log(getParams("http//food.express.co/?test=5&a=b&c=d&e=f")); */
