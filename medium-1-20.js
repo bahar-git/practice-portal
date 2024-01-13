@@ -411,6 +411,7 @@ Write a JavaScript program to display the colors in the following way :
 ...`
 Related Topics: Function */
 
+// 1st way
 /* const myChoice = (arr) => {
   let output = "";
   for (let i = 0; i < arr.length; i++) {
@@ -427,6 +428,49 @@ Related Topics: Function */
       default:
         output += `${i + 1}th choice is ${arr[i]}. `;
     }
+  }
+  return output.trim();
+};
+console.log(
+  myChoice(["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"])
+); */
+
+// 2nd way
+/* const myChoice = (arr) => {
+  const suffix = ["st", "nd", "rd"];
+  let output = "";
+  for (let i = 0; i < arr.length; i++) {
+    let suffixDefault = "th";
+    switch (true) {
+      case i === 0:
+        suffixDefault = suffix[i];
+        break;
+      case i === 1:
+        suffixDefault = suffix[i];
+        break;
+      case i === 2:
+        suffixDefault = suffix[i];
+        break;
+      default:
+    }
+    output += `${i + 1}${suffixDefault} choice is ${arr[i]}. `;
+  }
+  return output.trim();
+};
+console.log(
+  myChoice(["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"])
+); */
+
+// 3rd way
+/* const myChoice = (arr) => {
+  const suffix = ["st", "nd", "rd"];
+  let output = "";
+  for (let i = 0; i < arr.length; i++) {
+    let suffixDefault = "th";
+    if (i < 3) {
+      suffixDefault = suffix[i];
+    }
+    output += `${i + 1}${suffixDefault} choice is ${arr[i]}. `;
   }
   return output.trim();
 };
