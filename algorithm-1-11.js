@@ -5,6 +5,7 @@ checkFrequency(22, 222) //false
 Constraints:  Runtime - O(N), where N is the length of numbers.
 Related Topics: Frequency counter */
 
+// 1st way - TC-O(n)
 /* function checkFrequency(firstNumber, secondNumber) {
   let str1 = String(firstNumber);
   let str2 = String(secondNumber);
@@ -27,7 +28,62 @@ Related Topics: Frequency counter */
 }
 console.log(checkFrequency(182, 281));
 console.log(checkFrequency(22, 222));
-console.log(checkFrequency("34", "14")); */
+console.log(checkFrequency("34", "14"));
+console.log(checkFrequency(1255899, 8991552));
+console.log(checkFrequency("1255899", "89915527")); */
+
+// 2nd way - TC-O(n)
+/* function checkFrequency(firstNumber, secondNumber) {
+  const str1 = String(firstNumber);
+  const str2 = String(secondNumber);
+  if (str1.length !== str2.length) return false;
+  const obj1 = freqCount(str1);
+  const obj2 = freqCount(str2);
+  for (let key in obj1) {
+    if (obj1[key] !== obj2[key]) return false;
+  }
+  return true;
+}
+
+function freqCount(str) {
+  return [...str].reduce((accum, currVal) => {
+    accum[currVal] = (accum[currVal] || 0) + 1;
+    return accum;
+  }, {});
+}
+console.log(checkFrequency(182, 281));
+console.log(checkFrequency(22, 222));
+console.log(checkFrequency("34", "14"));
+console.log(checkFrequency(1255899, 8991552));
+console.log(checkFrequency("1255899", "89915527")); */
+
+// 3rd way - TC-O(nlogn)
+/* function checkFrequency(firstNumber, secondNumber) {
+  const str1 = String(firstNumber);
+  const str2 = String(secondNumber);
+  return [...str1].sort().join("") === [...str2].sort().join("");
+}
+console.log(checkFrequency(182, 281));
+console.log(checkFrequency(22, 222));
+console.log(checkFrequency("34", "14"));
+console.log(checkFrequency(1255899, 8991552));
+console.log(checkFrequency("1255899", "89915527")); */
+
+// 4th way - TC-O(nlogn)
+/* function checkFrequency(firstNumber, secondNumber) {
+  const str1 = String(firstNumber);
+  const str2 = String(secondNumber);
+  return sorting(str1) === sorting(str2);
+}
+
+function sorting(str) {
+  return [...str].sort().join("");
+}
+console.log(checkFrequency(182, 281));
+console.log(checkFrequency(22, 222));
+console.log(checkFrequency("34", "14"));
+console.log(checkFrequency(1255899, 8991552));
+console.log(checkFrequency("1255899", "89915527")); */
 
 ////////////////////////////////////////////////////////////////
 
@@ -128,28 +184,22 @@ checkDuplicates(1, 2, 2) // true
 checkDuplicates('a', 'b', 'c', 'a') // true
 Related Topics: Multiple pointers */
 
-// 1st way
+// 1st way - TC-O(n)
 /* function checkDuplicates(...args) {
-  let result = false;
-  let arr = [...args];
-  let startNum = arr[0];
-  let endNum = arr[arr.length - 1];
-  for (let i = 0; i < arr.length; i++) {
-    if (startNum === endNum) {
-      result = true;
-      break;
-    } else {
-      startNum = arr[i];
-      endNum = arr[arr.length - 1];
-    }
+  let obj = {};
+  for (let el of args) {
+    if (obj[el]) return true;
+    else obj[el] = 1;
   }
-  return result;
+  return false;
 }
 console.log(checkDuplicates(1, 2, 3));
 console.log(checkDuplicates(1, 2, 2));
-console.log(checkDuplicates("a", "b", "c", "a")); */
+console.log(checkDuplicates("a", "b", "c", "a"));
+console.log(checkDuplicates("a", "b", "c", "d"));
+console.log(checkDuplicates("a", "e", "b", "e", "c", "d")); */
 
-// 2nd way
+// 2nd way - TC-O(n)
 /* function checkDuplicates(...args) {
   for (let i = 0; i < args.length; i++) {
     const numberTosearch = args[i];
@@ -161,7 +211,35 @@ console.log(checkDuplicates("a", "b", "c", "a")); */
 }
 console.log(checkDuplicates(1, 2, 3));
 console.log(checkDuplicates(1, 2, 2));
-console.log(checkDuplicates("a", "b", "c", "a")); */
+console.log(checkDuplicates("a", "b", "c", "a"));
+console.log(checkDuplicates("a", "b", "c", "d"));
+console.log(checkDuplicates("a", "e", "b", "e", "c", "d")); */
+
+// 3rd way - TC-O(n)
+/* function checkDuplicates(...args) {
+  const notRepeated = new Set();
+  for (let el of args) {
+    if (notRepeated.has(el)) return true;
+    else notRepeated.add(el);
+  }
+  return false;
+}
+console.log(checkDuplicates(1, 2, 3));
+console.log(checkDuplicates(1, 2, 2));
+console.log(checkDuplicates("a", "b", "c", "a"));
+console.log(checkDuplicates("a", "b", "c", "d"));
+console.log(checkDuplicates("a", "e", "b", "e", "c", "d")); */
+
+// 4th way
+/* function checkDuplicates(...args) {
+  const notRepeated = new Set(args);
+  return notRepeated.size !== args.length;
+}
+console.log(checkDuplicates(1, 2, 3));
+console.log(checkDuplicates(1, 2, 2));
+console.log(checkDuplicates("a", "b", "c", "a"));
+console.log(checkDuplicates("a", "b", "c", "d"));
+console.log(checkDuplicates("a", "e", "b", "e", "c", "d")); */
 
 ////////////////////////////////////////////////////////////////
 
@@ -242,3 +320,98 @@ Related Topics: Recursion */
   return base * power(base, exponent - 1);
 }
 console.log(power(5, 2)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 9.  isPalindrome
+Determine if LinkedList is a palindrome. Palindrome is when you can read forward and backward same.
+Ex:
+1->2->2->1 //true
+1->2->1 //true
+1->2->1->2 //false
+Related Topics: Linked List */
+
+// NOT SOLVED
+/* class Node {
+  constructor(val) {
+      this.val = val;
+      this.next = null;
+  }
+}
+
+function isPalindrome(head) {
+  //implement here
+} */
+
+////////////////////////////////////////////////////////////////
+
+/* 10.  printLen
+Print the length of linked list;
+Ex:
+let n = new Node(1)
+n.next = new Node(2)
+printLen(n) // 2
+Related Topics: Linked List */
+
+// NOT SOLVED
+/* class Node {
+  constructor(val) {
+      this.val = val;
+      this.next = null;
+  }
+}
+
+function printLen(node) {
+  //implement here
+} */
+
+// example
+/* const el = {
+  val: "pet",
+  next: {
+    val: "cat",
+    next: {
+      val: "kitten",
+      next: {
+        val: "kitty",
+        next: null,
+      },
+    },
+  },
+};
+
+function printLen(node) {
+  let entrance = node;
+  let length = 0;
+  while (entrance && entrance.val) {
+    length++;
+    entrance = entrance.next;
+  }
+  return length;
+}
+console.log(printLen(el)); */
+
+////////////////////////////////////////////////////////////////
+
+/* 11.  removeDups
+Write a function called removeDups to remove duplicates from the unsorted linked list.
+Ex:
+let head = new Node(1);
+head.next = new Node(1);
+head.next.next = new Node(2);
+// 1->1->2->null
+removeDups(head);
+//1->2->null
+Related Topics: Linked List */
+
+// NOT SOLVED
+/* class Node {
+  constructor(val) {
+      this.val = val;
+      this.next = null;
+  }
+}
+
+function removeDups(node) {
+  //implement here
+} */
